@@ -5,8 +5,6 @@
  */
 import React, { Component } from 'react';
 import './assets/sass/react-tunes-player.css'
-import dune from './assets/images/dune.jpg'
-import theLelogTune from './assets/audio/the_lego_tune.ogg'
 
 class ReactTunesPlayerView extends Component {
   render () {
@@ -16,10 +14,10 @@ class ReactTunesPlayerView extends Component {
             <div className="react-tunes-player__wrapper l-container l-fullwidth">
               <div id="mainwrap">
                 <div id="currentAlbumPlaying">
-                  <img src={dune} alt=""/>
+                  <img src="" alt=""/>
                 </div>
                 <div id="nowPlay">
-                  <span>The Lego Tune</span>
+                  <span></span>
                 </div>
                 <div id="tracks">
                   <a id="btnPrev">&laquo;</a>
@@ -27,7 +25,7 @@ class ReactTunesPlayerView extends Component {
                 </div>
                 <div id="audiowrap">
                   <div id="audio0">
-                    <audio preload id="audio1" controls="controls" src={theLelogTune}>Your browser does not support HTML5 Audio!</audio>
+                    <audio preload id="audio1" controls="controls" src="">Your browser does not support HTML5 Audio!</audio>
                   </div>
                 </div>
               </div>
