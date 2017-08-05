@@ -2,7 +2,7 @@
 @import url("//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400");
 .react-tunes-player {
   position: fixed;
-  bottom: 0;
+  bottom: -5px;
   visibility: hidden;
   width: 100%;
   -webkit-perspective: 900;
@@ -296,3 +296,6 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"]:hover {
     width: 240px; }
   #currentAlbumPlaying, #nowPlay {
     display: none; } }
+
+audio::-webkit-media-controls-panel {
+  background-color: transparent; }
