@@ -5,7 +5,7 @@
  */
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setTunes, setCurrentTune, playCurrentTune, pauseCurrentTune } from './react-tunes-player-reducer';
+import { setTunes, setCurrentTune, playCurrentTune, pauseCurrentTune, setNextTune, setPreviousTune } from './react-tunes-player-reducer';
 import ReactTunesPlayerView from './react-tunes-player-view';
 
 export const mapStateToProps = ({ reactTunesPlayerReducer }) => ({
@@ -14,7 +14,7 @@ export const mapStateToProps = ({ reactTunesPlayerReducer }) => ({
   _player: reactTunesPlayerReducer.player
 });
 
-export const mapDispatchToProps= (dispatch) => bindActionCreators({ setTunes, setCurrentTune, playCurrentTune, pauseCurrentTune }, dispatch);
+export const mapDispatchToProps= (dispatch) => bindActionCreators({ setTunes, setCurrentTune, playCurrentTune, pauseCurrentTune, setNextTune, setPreviousTune }, dispatch);
 
 const ReactTunesPlayerContainer = connect(mapStateToProps, mapDispatchToProps)(ReactTunesPlayerView);
 export default ReactTunesPlayerContainer;

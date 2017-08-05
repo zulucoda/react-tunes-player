@@ -3,7 +3,7 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-import reactTunePlayerReducer, { setTunes, setCurrentTune, playCurrentTune, pauseCurrentTune } from '../react-tunes-player-reducer';
+import reactTunePlayerReducer, { setTunes, setCurrentTune, playCurrentTune, pauseCurrentTune, setNextTune, setPreviousTune } from '../react-tunes-player-reducer';
 
 describe('React Tune Player Reducer - Unit Test', () => {
   function stateBefore () {
@@ -149,5 +149,89 @@ describe('React Tune Player Reducer - Unit Test', () => {
 
         expect(actual).toEqual(expected);
     });
+  });
+
+  describe('set next tune', () => {
+    it('should return state with current set to next tune when setNextTune action is dispatched', function () {
+        const _stateBefore = {
+          ...stateBefore(),
+          tunes: tunes(),
+          current: tunes()[0]
+        };
+
+        const action = setNextTune();
+
+        const actual = reactTunePlayerReducer(_stateBefore, action);
+
+        const expected = {
+            ..._stateBefore,
+          current: tunes()[1]
+        };
+
+        expect(actual).toEqual(expected);
+    });
+
+    describe('when last tune', () => {
+      it('should return state with current set to the first tune when setNextTune action is dispatched', function () {
+        const _stateBefore = {
+          ...stateBefore(),
+          tunes: tunes(),
+          current: tunes()[4]
+        };
+
+        const action = setNextTune();
+
+        const actual = reactTunePlayerReducer(_stateBefore, action);
+
+        const expected = {
+          ..._stateBefore,
+          current: tunes()[0]
+        };
+
+        expect(actual).toEqual(expected);
+      });
+    })
+  });
+
+  describe('set previous tune', () => {
+    it('should return state with current set to previous tune when setPreviousTune action is dispatched', function () {
+        const _stateBefore = {
+          ...stateBefore(),
+          tunes: tunes(),
+          current: tunes()[3]
+        };
+
+        const action = setPreviousTune();
+
+        const actual = reactTunePlayerReducer(_stateBefore, action);
+
+        const expected = {
+            ..._stateBefore,
+          current: tunes()[2]
+        };
+
+        expect(actual).toEqual(expected);
+    });
+
+    describe('when first tune', () => {
+      it('should return state with current set to the last tune when setPreviousTune action is dispatched', function () {
+        const _stateBefore = {
+          ...stateBefore(),
+          tunes: tunes(),
+          current: tunes()[0]
+        };
+
+        const action = setPreviousTune();
+
+        const actual = reactTunePlayerReducer(_stateBefore, action);
+
+        const expected = {
+          ..._stateBefore,
+          current: tunes()[4]
+        };
+
+        expect(actual).toEqual(expected);
+      });
+    })
   });
 });

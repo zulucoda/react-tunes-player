@@ -46,8 +46,8 @@ class ReactTunesPlayerView extends Component {
                   <span>{this.props._current.name}</span>
                 </div>
                 <div id="tracks">
-                  <a id="btnPrev" onClick={() => {this.tunesPlayer.play()}}>&laquo;</a>
-                  <a id="btnNext">&raquo;</a>
+                  <a id="btnPrev" onClick={() => (this.props.setPreviousTune())}>&laquo;</a>
+                  <a id="btnNext" onClick={() => (this.props.setNextTune())}>&raquo;</a>
                 </div>
                 <div id="audiowrap">
                   <div id="audio0">
