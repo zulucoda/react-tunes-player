@@ -4,7 +4,7 @@
  * Copyright zulucoda - mfbproject
  */
 import { combineReducers } from "redux";
-import reactTunesPlayerReducer from './react-tunes-player/react-tunes-player-reducer';
+import reactTunesPlayerReducer from "./react-tunes-player/react-tunes-player-reducer";
 
 export default combineReducers({
   reactTunesPlayerReducer
