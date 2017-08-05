@@ -17,7 +17,8 @@ const initialState = {
 
 const REACT_TUNES_PLAYER_SET_TUNES = 'REACT_TUNES_PLAYER_SET_TUNES';
 const REACT_TUNES_PLAYER_SET_CURRENT_TUNE = 'REACT_TUNES_PLAYER_SET_CURRENT_TUNE';
-const REACT_TUNES_PLAYER_TOGGLE_PLAY_OR_PAUSE = 'REACT_TUNES_PLAYER_TOGGLE_PLAY_OR_PAUSE';
+const REACT_TUNES_PLAYER_PLAY_CURRENT_TUNE = 'REACT_TUNES_PLAYER_PLAY_CURRENT_TUNE';
+const REACT_TUNES_PLAYER_PAUSE_CURRENT_TUNE = 'REACT_TUNES_PLAYER_PAUSE_CURRENT_TUNE';
 
 export const setTunes = (payload) => ({
   type: REACT_TUNES_PLAYER_SET_TUNES,
@@ -29,8 +30,12 @@ export const setCurrentTune = (payload) => ({
   payload
 });
 
-export const togglePlayOrPause = () => ({
-  type: REACT_TUNES_PLAYER_TOGGLE_PLAY_OR_PAUSE
+export const playCurrentTune = () => ({
+  type: REACT_TUNES_PLAYER_PLAY_CURRENT_TUNE
+});
+
+export const pauseCurrentTune = () => ({
+  type: REACT_TUNES_PLAYER_PAUSE_CURRENT_TUNE
 });
 
 const reactTunePlayerReducer = (state = initialState, action) => {
@@ -49,11 +54,18 @@ const reactTunePlayerReducer = (state = initialState, action) => {
           ...action.payload
         }
       };
-    case REACT_TUNES_PLAYER_TOGGLE_PLAY_OR_PAUSE:
+    case REACT_TUNES_PLAYER_PLAY_CURRENT_TUNE:
       return {
         ...state,
         player: {
-          isPlaying: !state.player.isPlaying
+          isPlaying: true
+        }
+      }
+    case REACT_TUNES_PLAYER_PAUSE_CURRENT_TUNE:
+      return {
+        ...state,
+        player: {
+          isPlaying: false
         }
       }
     default:

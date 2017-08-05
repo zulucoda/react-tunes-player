@@ -3,7 +3,7 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-import reactTunePlayerReducer, { setTunes, setCurrentTune, togglePlayOrPause } from '../react-tunes-player-reducer';
+import reactTunePlayerReducer, { setTunes, setCurrentTune, playCurrentTune, pauseCurrentTune } from '../react-tunes-player-reducer';
 
 describe('React Tune Player Reducer - Unit Test', () => {
   function stateBefore () {
@@ -113,9 +113,9 @@ describe('React Tune Player Reducer - Unit Test', () => {
     });
   });
 
-  describe('toggle play or pause', () => {
-    it('should return state player isPlaying is set when togglePlayOrPause action is dispatched', function () {
-        const action = togglePlayOrPause();
+  describe('play current tune', () => {
+    it('should return state with isPlaying set to true when playCurrentTune action is dispatched', function () {
+        const action = playCurrentTune();
 
         const actual = reactTunePlayerReducer(stateBefore(), action);
 
@@ -124,6 +124,27 @@ describe('React Tune Player Reducer - Unit Test', () => {
           player: {
             isPlaying: true
           }
+        };
+
+        expect(actual).toEqual(expected);
+    });
+  });
+
+  describe('pause current tune', () => {
+    it('should return state with isPlaying set to false when pauseCurrentTune action is dispatched', function () {
+        const _stateBefore = {
+          ...stateBefore(),
+          player: {
+            isPlaying: true
+          }
+        };
+
+        const action = pauseCurrentTune();
+
+        const actual = reactTunePlayerReducer(_stateBefore, action);
+
+        const expected = {
+          ...stateBefore()
         };
 
         expect(actual).toEqual(expected);

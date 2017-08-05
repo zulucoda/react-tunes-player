@@ -12,6 +12,27 @@ class ReactTunesPlayerView extends Component {
     this.props.setTunes(tunes);
     if (tunes.length > 0) { this.props.setCurrentTune(tunes[0]);}
   }
+
+  componentDidMount() {
+    const audio = this.tunesPlayer;
+
+    audio.addEventListener('play', () => {
+      this.props.playCurrentTune();
+    });
+
+    audio.addEventListener('pause', () => {
+      this.props.pauseCurrentTune();
+    });
+  }
+
+  componentWillReceiveProps(props){
+    if (props._player.isPlaying) {
+      this.tunesPlayer.play();
+    }else{
+      this.tunesPlayer.pause();
+    }
+  }
+
   render () {
     return (
         <div className="react-tunes-player g-z-index-header m-visible">
@@ -25,12 +46,12 @@ class ReactTunesPlayerView extends Component {
                   <span>{this.props._current.name}</span>
                 </div>
                 <div id="tracks">
-                  <a id="btnPrev">&laquo;</a>
+                  <a id="btnPrev" onClick={() => {this.tunesPlayer.play()}}>&laquo;</a>
                   <a id="btnNext">&raquo;</a>
                 </div>
                 <div id="audiowrap">
                   <div id="audio0">
-                    <audio preload id="audio1" controls="controls" src={this.props._current.tune}>Your browser does not support HTML5 Audio!</audio>
+                    <audio preload ref={(ref) => { this.tunesPlayer = ref; }} controls="controls" src={this.props._current.tune}>Your browser does not support HTML5 Audio!</audio>
                   </div>
                 </div>
               </div>
