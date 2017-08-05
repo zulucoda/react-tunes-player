@@ -12,7 +12,6 @@
 
 }
 
-
 .react-tunes-player__bg {
   position: absolute;
   top: -1px;
@@ -110,6 +109,14 @@ audio { margin: 1.5em 0.5em 0 0; }
   img {
     width: 75px;
     height: 75px;
+  }
+}
+
+.warning-wrapper {
+  span {
+    img {
+      vertical-align: middle;
+    }
   }
 }
 

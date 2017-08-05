@@ -30,10 +30,10 @@
     ]
   },
   "devDependencies": {
-    "node-sass-chokidar": "0.0.3",
-    "npm-run-all": "^4.0.2",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.2",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
     "prettier": "^1.5.3"
   }
 }

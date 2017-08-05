@@ -109,6 +109,9 @@ audio {
     width: 75px;
     height: 75px; }
 
+.warning-wrapper span img {
+  vertical-align: middle; }
+
 /* IE 9 */
 html[data-useragent*="MSIE 9.0"] audio {
   margin-left: 9px;
