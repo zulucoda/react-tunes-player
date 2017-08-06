@@ -4,12 +4,21 @@
  * Copyright zulucoda - mfbproject
  */
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import ReactTunesPlayerView from "../react-tunes-player-view";
+import { JSDOM } from "jsdom";
+import ReactDOM from "react-dom";
+import simulant from "jsdom-simulant";
+
+const { document } = new JSDOM("").window;
+global.document = document;
+global.window = document.defaultView;
 
 describe("React Tunes Player View - Unit Test", () => {
   let wrapper, tunes;
   const mockFunc = jest.fn();
+  const playCurrentTuneMockFunc = jest.fn();
+  const pauseCurrentTuneMockFunc = jest.fn();
 
   describe("when not rendered with tunes", () => {
     beforeEach(function() {
@@ -20,6 +29,54 @@ describe("React Tunes Player View - Unit Test", () => {
       expect(wrapper.contains("Warning! No tunes loaded in player.")).toBe(
         true
       );
+    });
+
+    describe("componentDidMount", () => {
+      it("should NOT add event listener when tunes props is supplied", function() {
+        spyOn(
+          ReactTunesPlayerView.prototype,
+          "componentDidMount"
+        ).and.callThrough();
+
+        wrapper = mount(<ReactTunesPlayerView setTunes={mockFunc} />);
+
+        expect(
+          ReactTunesPlayerView.prototype.componentDidMount
+        ).toHaveBeenCalledTimes(1);
+        expect(wrapper.find(".warning-wrapper").length).toEqual(1);
+      });
+    });
+
+    describe("componentWillReceiveProps", () => {
+      it("should NOT call playCurrentTune when isPlaying is true", function() {
+        wrapper = mount(
+          <ReactTunesPlayerView
+            setTunes={mockFunc}
+            playCurrentTune={playCurrentTuneMockFunc}
+            pauseCurrentTune={pauseCurrentTuneMockFunc}
+          />
+        );
+
+        wrapper
+          .instance()
+          .componentWillReceiveProps({ _player: { isPlaying: true } });
+        expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
+      });
+
+      it("should NOT call pauseCurrentTuneMockFunc when isPlaying is false", function() {
+        wrapper = mount(
+          <ReactTunesPlayerView
+            setTunes={mockFunc}
+            playCurrentTune={playCurrentTuneMockFunc}
+            pauseCurrentTune={pauseCurrentTuneMockFunc}
+          />
+        );
+
+        wrapper
+          .instance()
+          .componentWillReceiveProps({ _player: { isPlaying: false } });
+        expect(pauseCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
+      });
     });
   });
 
@@ -97,6 +154,75 @@ describe("React Tunes Player View - Unit Test", () => {
     it("should call setPreviousTune action when onClick btnPrev", function() {
       wrapper.find("#btnNext").simulate("click");
       expect(setNextTuneMockFunc).toHaveBeenCalled();
+    });
+
+    describe("componentDidMount", () => {
+      it("should add play and pause event listeners when tunes props is supplied", function() {
+        ReactDOM.render(
+          <ReactTunesPlayerView
+            setTunes={mockFunc}
+            setCurrentTune={mockFunc}
+            _current={tunes[0]}
+            tunes={tunes}
+            setPreviousTune={setPreviousTuneMockFunc}
+            setNextTune={setNextTuneMockFunc}
+            playCurrentTune={playCurrentTuneMockFunc}
+            pauseCurrentTune={pauseCurrentTuneMockFunc}
+          />,
+          document.body
+        );
+
+        expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
+        expect(pauseCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
+
+        simulant.fire(document.body.querySelector("audio"), "play");
+        expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
+
+        simulant.fire(document.body.querySelector("audio"), "pause");
+        expect(pauseCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
+      });
+    });
+
+    describe("componentWillReceiveProps", () => {
+      it("should call playCurrentTune when isPlaying is true", function() {
+        wrapper = mount(
+          <ReactTunesPlayerView
+            setTunes={mockFunc}
+            setCurrentTune={mockFunc}
+            _current={tunes[0]}
+            tunes={tunes}
+            setPreviousTune={setPreviousTuneMockFunc}
+            setNextTune={setNextTuneMockFunc}
+            playCurrentTune={playCurrentTuneMockFunc}
+            pauseCurrentTune={pauseCurrentTuneMockFunc}
+          />
+        );
+
+        wrapper
+          .instance()
+          .componentWillReceiveProps({ _player: { isPlaying: true } });
+        expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
+      });
+
+      it("should call pauseCurrentTuneMockFunc when isPlaying is false", function() {
+        wrapper = mount(
+          <ReactTunesPlayerView
+            setTunes={mockFunc}
+            setCurrentTune={mockFunc}
+            _current={tunes[0]}
+            tunes={tunes}
+            setPreviousTune={setPreviousTuneMockFunc}
+            setNextTune={setNextTuneMockFunc}
+            playCurrentTune={playCurrentTuneMockFunc}
+            pauseCurrentTune={pauseCurrentTuneMockFunc}
+          />
+        );
+
+        wrapper
+          .instance()
+          .componentWillReceiveProps({ _player: { isPlaying: false } });
+        expect(pauseCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
+      });
     });
   });
 });
