@@ -1,5 +1,4 @@
 # React Tunes Player
------------
 
 A simple .ogg/.mp3 player. This component uses Redux to store it's state. 
 The benefit of using Redux is the ability of dispatching action to control the player functions.
