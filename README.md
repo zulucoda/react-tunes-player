@@ -20,6 +20,9 @@ npm install --save react-tunes-player
 
 ## Usage
 
+## Example Repo on how to use `react-tunes-player`
+[https://github.com/zulucoda/react-tunes-player-test](https://github.com/zulucoda/react-tunes-player-test)
+
 ## React
 
 ### Import `ReactTunesPlayerContainer` into your view
