@@ -1,6 +1,7 @@
 {
   "name": "react-tunes-player",
   "author": "Muzikayise Flynn Buthelezi (zuluCoda)",
+  "description": "A simple .ogg/.mp3 player. ",
   "version": "0.2.4",
   "main": "lib/index.js",
   "private": true,
