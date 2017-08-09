@@ -168,6 +168,7 @@ describe("React Tunes Player View - Unit Test", () => {
         expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
         expect(pauseCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
         expect(setNextTuneMockFunc).toHaveBeenCalledTimes(1);
+        expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
 
         simulant.fire(document.body.querySelector("audio"), "play");
         expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
@@ -177,6 +178,7 @@ describe("React Tunes Player View - Unit Test", () => {
 
         simulant.fire(document.body.querySelector("audio"), "ended");
         expect(setNextTuneMockFunc).toHaveBeenCalledTimes(2);
+        expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(2);
       });
     });
 
@@ -198,7 +200,7 @@ describe("React Tunes Player View - Unit Test", () => {
         wrapper
           .instance()
           .componentWillReceiveProps({ _player: { isPlaying: true } });
-        expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
+        expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(2);
       });
 
       it("should call pauseCurrentTuneMockFunc when isPlaying is false", function() {

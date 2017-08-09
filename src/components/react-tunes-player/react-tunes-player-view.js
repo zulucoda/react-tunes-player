@@ -31,6 +31,7 @@ class ReactTunesPlayerView extends Component {
 
       audio.addEventListener("ended", () => {
         this.props.setNextTune();
+        this.props.playCurrentTune();
       });
     }
   }
