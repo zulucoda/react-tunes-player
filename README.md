@@ -9,6 +9,9 @@ The benefit of using Redux is the ability of dispatching action to control the p
 - `setNextTune()` - This action creator will dispatched an action to go to the next tune in the tunes list.
 - `setPreviousTune()` - This action creator will dispatched an action to go to the previous tune in the tunes list.
 
+## Demo
+[Demo - https://react-tunes-player.mfbproject.co.za/](https://react-tunes-player.mfbproject.co.za/)
+
 ## Dependency
 - Redux
 
