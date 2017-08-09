@@ -7,4 +7,9 @@
 // };
 
 export ReactTunesPlayerContainer from "./react-tunes-player-container";
-export reactTunesPlayerReducer from "./react-tunes-player-reducer";
+export reactTunesPlayerReducer, {
+  setPreviousTune,
+  setNextTune,
+  pauseCurrentTune,
+  playCurrentTune
+} from "./react-tunes-player-reducer";
