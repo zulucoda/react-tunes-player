@@ -81,6 +81,7 @@ class ReactTunesPlayerView extends Component {
                   <div id="audiowrap">
                     <div id="audio0">
                       <audio
+                        autoPlay={this.props.autoPlay}
                         preload
                         ref={ref => {
                           this.tunesPlayer = ref;
@@ -110,8 +111,13 @@ class ReactTunesPlayerView extends Component {
   }
 }
 
+ReactTunesPlayerView.defaultProps = {
+  autoPlay: true
+};
+
 ReactTunesPlayerView.propTypes = {
-  tunes: PropTypes.array.isRequired
+  tunes: PropTypes.array.isRequired,
+  autoPlay: PropTypes.bool
 };
 
 export default ReactTunesPlayerView;

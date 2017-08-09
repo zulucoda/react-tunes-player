@@ -222,6 +222,39 @@ describe("React Tunes Player View - Unit Test", () => {
           .componentWillReceiveProps({ _player: { isPlaying: false } });
         expect(pauseCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
       });
+
+      it("should render React Tune Player View with autoPlay set to true by default", function() {
+        wrapper = mount(
+          <ReactTunesPlayerView
+            setTunes={mockFunc}
+            setCurrentTune={mockFunc}
+            _current={tunes[0]}
+            tunes={tunes}
+            setPreviousTune={setPreviousTuneMockFunc}
+            setNextTune={setNextTuneMockFunc}
+            playCurrentTune={playCurrentTuneMockFunc}
+            pauseCurrentTune={pauseCurrentTuneMockFunc}
+          />
+        );
+        expect(wrapper.props().autoPlay).toBeTruthy();
+      });
+
+      it("should render React Tune Player View with autoPlay set to false", function() {
+        wrapper = mount(
+          <ReactTunesPlayerView
+            setTunes={mockFunc}
+            setCurrentTune={mockFunc}
+            _current={tunes[0]}
+            tunes={tunes}
+            setPreviousTune={setPreviousTuneMockFunc}
+            setNextTune={setNextTuneMockFunc}
+            playCurrentTune={playCurrentTuneMockFunc}
+            pauseCurrentTune={pauseCurrentTuneMockFunc}
+            autoPlay={false}
+          />
+        );
+        expect(wrapper.props().autoPlay).toBeFalsy();
+      });
     });
   });
 });
