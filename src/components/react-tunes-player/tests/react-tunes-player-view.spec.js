@@ -87,35 +87,28 @@ describe("React Tunes Player View - Unit Test", () => {
       tunes = [
         {
           tune: "/assets/audio/the_lego_tune.ogg",
-          name: "The lego tune",
+          name: "The lego tune 1",
           album: "/assets/images/dune.jpg"
         },
         {
-          tune:
-            "http://test.ithastobejazz.co.za/mp3s/1.It-Has-To-Be-Jazz-Preview.mp3",
-          name: "It Has To Be Jazz",
-          album: "http://test.ithastobejazz.co.za/images/albums/1.jpg"
+          tune: "/assets/audio/the_lego_tune.ogg",
+          name: "The lego tune 2",
+          album: "/assets/images/dune.jpg"
         },
         {
-          tune:
-            "http://test.ithastobejazz.co.za/mp3s/2.Prelude-1-Preview-1.mp3",
-          name: "Prelude",
-          album: "http://test.ithastobejazz.co.za/images/albums/2.jpg"
+          tune: "/assets/audio/the_lego_tune.ogg",
+          name: "The lego tune 3",
+          album: "/assets/images/dune.jpg"
         },
         {
-          tune: "http://test.ithastobejazz.co.za/mp3s/3.Mangoli-Preview.mp3",
-          name: "Mangoli",
-          album: "http://test.ithastobejazz.co.za/images/albums/3.jpg"
+          tune: "/assets/audio/the_lego_tune.ogg",
+          name: "The lego tune 4",
+          album: "/assets/images/dune.jpg"
         },
         {
-          tune: "http://test.ithastobejazz.co.za/mp3s/5.Moods-Preview.mp3",
-          name: "Moods",
-          album: "http://test.ithastobejazz.co.za/images/albums/4.jpg"
-        },
-        {
-          tune: "http://test.ithastobejazz.co.za/mp3s/6.Prelude-3-Preview-.mp3",
-          name: "Prelude 3",
-          album: "http://test.ithastobejazz.co.za/images/albums/5.jpg"
+          tune: "/assets/audio/the_lego_tune.ogg",
+          name: "The lego tune 5",
+          album: "/assets/images/dune.jpg"
         }
       ];
       wrapper = shallow(
@@ -137,7 +130,7 @@ describe("React Tunes Player View - Unit Test", () => {
     });
 
     it("should render React Tune Player View with name of the current tune", function() {
-      expect(wrapper.contains("The lego tune")).toBe(true);
+      expect(wrapper.contains("The lego tune 1")).toBe(true);
     });
 
     it("should render React Tune Player View with picture of the current tune", function() {
