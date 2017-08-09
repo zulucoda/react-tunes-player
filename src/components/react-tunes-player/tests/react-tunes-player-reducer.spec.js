@@ -3,7 +3,7 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-import reactTunePlayerReducer, {
+import ReactTunesPlayerReducer, {
   setTunes,
   setCurrentTune,
   playCurrentTune,
@@ -60,7 +60,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
   it("should return initial state", function() {
     const action = {};
 
-    const actual = reactTunePlayerReducer(undefined, action);
+    const actual = ReactTunesPlayerReducer(undefined, action);
 
     const expected = {
       ...stateBefore()
@@ -83,7 +83,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
       }
     };
 
-    const actual = reactTunePlayerReducer(_stateBefore, action);
+    const actual = ReactTunesPlayerReducer(_stateBefore, action);
 
     const expected = {
       ..._stateBefore
@@ -96,7 +96,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
     it("should return state with tunes set when setTunes action is dispatched", function() {
       const action = setTunes(tunes());
 
-      const actual = reactTunePlayerReducer(stateBefore(), action);
+      const actual = ReactTunesPlayerReducer(stateBefore(), action);
 
       const expected = {
         ...stateBefore(),
@@ -111,7 +111,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
     it("should return state with current tune set when set current tune action is dispatched", function() {
       const action = setCurrentTune(tunes()[3]);
 
-      const actual = reactTunePlayerReducer(stateBefore(), action);
+      const actual = ReactTunesPlayerReducer(stateBefore(), action);
 
       const expected = {
         ...stateBefore(),
@@ -126,7 +126,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
     it("should return state with isPlaying set to true when playCurrentTune action is dispatched", function() {
       const action = playCurrentTune();
 
-      const actual = reactTunePlayerReducer(stateBefore(), action);
+      const actual = ReactTunesPlayerReducer(stateBefore(), action);
 
       const expected = {
         ...stateBefore(),
@@ -150,7 +150,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
 
       const action = pauseCurrentTune();
 
-      const actual = reactTunePlayerReducer(_stateBefore, action);
+      const actual = ReactTunesPlayerReducer(_stateBefore, action);
 
       const expected = {
         ...stateBefore()
@@ -170,7 +170,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
 
       const action = setNextTune();
 
-      const actual = reactTunePlayerReducer(_stateBefore, action);
+      const actual = ReactTunesPlayerReducer(_stateBefore, action);
 
       const expected = {
         ..._stateBefore,
@@ -190,7 +190,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
 
         const action = setNextTune();
 
-        const actual = reactTunePlayerReducer(_stateBefore, action);
+        const actual = ReactTunesPlayerReducer(_stateBefore, action);
 
         const expected = {
           ..._stateBefore,
@@ -212,7 +212,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
 
       const action = setPreviousTune();
 
-      const actual = reactTunePlayerReducer(_stateBefore, action);
+      const actual = ReactTunesPlayerReducer(_stateBefore, action);
 
       const expected = {
         ..._stateBefore,
@@ -232,7 +232,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
 
         const action = setPreviousTune();
 
-        const actual = reactTunePlayerReducer(_stateBefore, action);
+        const actual = ReactTunesPlayerReducer(_stateBefore, action);
 
         const expected = {
           ..._stateBefore,

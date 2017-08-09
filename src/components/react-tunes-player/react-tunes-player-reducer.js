@@ -54,7 +54,7 @@ export const setPreviousTune = () => ({
   type: REACT_TUNES_PLAYER_SET_PREVIOUS_TUNE
 });
 
-const reactTunePlayerReducer = (state = initialState, action) => {
+const reactTunesPlayerReducer = (state = initialState, action) => {
   switch (action.type) {
     case REACT_TUNES_PLAYER_SET_TUNES:
       return {
@@ -104,4 +104,4 @@ const reactTunePlayerReducer = (state = initialState, action) => {
   }
 };
 
-export default reactTunePlayerReducer;
+export default reactTunesPlayerReducer;

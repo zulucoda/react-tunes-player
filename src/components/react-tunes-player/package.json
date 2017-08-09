@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "react-tunes-player",
+  "main": "./index.js"
+}
