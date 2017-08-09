@@ -54,7 +54,7 @@
     "start-js": "node scripts/start.js",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && node scripts/build.js",
-    "lib": "babel src/node_modules --out-dir lib --copy-files",
+    "lib": "babel src/components --out-dir lib --copy-files",
     "test": "node scripts/test.js --coverage",
     "precommit": "lint-staged"
   },

@@ -1,0 +1,229 @@
+/* react-tune-player */
+
+.react-tunes-player {
+  position: fixed;
+  bottom: -5px;
+  visibility: hidden;
+  width: 100%;
+  -webkit-perspective: 900;
+  perspective: 900;
+  -webkit-perspective-origin: 80% 100%;
+  perspective-origin: 80% 100%;
+
+}
+
+.react-tunes-player__bg {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.react-tunes-player__inner {
+  box-shadow:0 0 6px 1px rgba(0,0,0,.25);
+  height: 75px;
+  visibility: visible;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%); }
+
+.react-tunes-player__inner {
+  background-color: #f2f2f2;
+  border-top: 1px solid #cecece;
+}
+
+.react-tunes-player.m-visible .react-tunes-player__inner {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.react-tunes-player__wrapper {
+  padding-bottom: 10px;
+  visibility: visible;
+  position: relative;
+  height: 100%;
+}
+
+
+/* Font Family
+================================================== */
+
+@import url("//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400");
+
+/* Tablet (Portrait)
+================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container { width:556px; }
+}
+
+
+/* Mobile (Portrait)
+================================================== */
+
+@media only screen and (max-width: 767px) {
+  .container { width:300px; }
+}
+
+
+/* Mobile (Landscape)
+================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container { width:420px; }
+}
+
+
+/* CSS Reset
+================================================== */
+
+/* Audio Player Styles
+================================================== */
+
+/* Default / Desktop / Firefox */
+audio { margin: 1.5em 0.5em 0 0; }
+#mainwrap {
+  height: 100%;
+  width: 100%;
+}
+#audiowrap { margin:0 auto; float: right; }
+#plwrap { margin:0 auto; }
+#tracks {
+  position:relative; text-align:center; float: left;
+  margin: 1.2em 0 0 0;
+  a {
+    background-color: transparent;
+    color: #231F20;
+    font-size: 2em;
+  }
+}
+#nowPlay {
+  float: left;
+  margin: 1.8em 1em 0 0;
+}
+#npTitle { margin:0; padding:21px; text-align:right; }
+#npAction { padding:21px; position:absolute; }
+#currentAlbumPlaying { float: left;
+  margin: 0 1em 0 0;
+  img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+.warning-wrapper {
+  span {
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+/* IE 9 */
+html[data-useragent*="MSIE 9.0"] audio { margin-left:9px; outline:none; width:680px; }
+html[data-useragent*="MSIE 9.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="MSIE 9.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="MSIE 9.0"] a[id^="btn"]:hover { background-color:#080808; }
+
+/* IE 10 */
+html[data-useragent*="MSIE 10.0"] audio { margin-left:6px; width:687px; }
+html[data-useragent*="MSIE 10.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] a[id^="btn"]:hover { background-color:#080808; }
+
+/* IE 11 */
+html[data-useragent*="rv:11.0"] audio { margin-left:2px; width:695px; }
+html[data-useragent*="rv:11.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="rv:11.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="rv:11.0"] a[id^="btn"]:hover { background-color:#080808; }
+
+/* All Apple Products */
+html[data-useragent*="Apple"] audio { margin:0; width:100%; }
+html[data-useragent*="Apple"] #audiowrap { background-color:#000; }
+html[data-useragent*="Apple"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="Apple"] a[id^="btn"]:hover { background-color:#080808; }
+
+/* IOS 7 */
+html[data-useragent*="OS 7"] audio { margin-left:3px; width:690px; }
+html[data-useragent*="OS 7"] #audiowrap { background-color:#e6e6e6; }
+html[data-useragent*="OS 7"] a[id^="btn"] { background-color:#e6e6e6; color:#373837; }
+html[data-useragent*="OS 7"] a[id^="btn"]:hover { background-color:#eee; }
+
+/* IOS 8 */
+html[data-useragent*="OS 8"] audio { margin-left:6px; width:694px; }
+html[data-useragent*="OS 8"] #audiowrap { background-color:#e4e4e4; }
+html[data-useragent*="OS 8"] a[id^="btn"] { background-color:#e4e4e4; color:#373837; }
+html[data-useragent*="OS 8"] a[id^="btn"]:hover { background-color:#eee; }
+
+/* IOS 9 */
+html[data-useragent*="OS 9"] audio { margin-left:6px; width:694px; }
+html[data-useragent*="OS 9"] #audiowrap { background-color:#d5d5d5; }
+html[data-useragent*="OS 9"] a[id^="btn"] { background-color:#d5d5d5; color:#373837; }
+html[data-useragent*="OS 9"] a[id^="btn"]:hover { background-color:#eee; }
+
+/* Chrome */
+html[data-useragent*="Chrome"] audio { margin-left:9px; width:677px; }
+html[data-useragent*="Chrome"] #audiowrap { background-color:#fafafa; }
+html[data-useragent*="Chrome"] a[id^="btn"] { background-color:#fafafa; color:#5a5a5a; }
+html[data-useragent*="Chrome"] a[id^="btn"]:hover { background-color:#eee; }
+
+/* Chrome / Android / Tablet */
+html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:4px; width:689px; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #audiowrap { background-color:#fafafa; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"] { background-color:#fafafa; color:#373837; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"]:hover { background-color:#eee; }
+
+/* Audio Player Media Queries
+================================================== */
+/* Tablet Landscape */
+@media only screen and (min-width: 1024px)  {
+  audio { width:700px; }
+  #audiowrap { margin:0 auto; float: none }
+  #tracks {
+    a {
+      padding: 0 1em 0 1em;
+    }
+  }
+}
+
+/* Tablet Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  audio { width:640px; }
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  audio { width:430px; }
+}
+
+/* Mobile Landscape */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  audio { width:320px; }
+}
+/* Mobile Landscape - smaller */
+@media only screen and (min-width: 480px) and (max-width: 568px) {
+  audio { width:280px; }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 479px) {
+  audio { width:310px; }
+  #currentAlbumPlaying, #nowPlay { display: none; }
+}
+
+/* Mobile Portrait - small */
+@media only screen and (max-width: 360px) {
+  audio { width:280px; }
+  #currentAlbumPlaying, #nowPlay { display: none; }
+}
+
+/* Mobile Portrait - smaller */
+@media only screen and (max-width: 320px) {
+  audio { width:240px; }
+  #currentAlbumPlaying, #nowPlay { display: none; }
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: transparent;
+}
