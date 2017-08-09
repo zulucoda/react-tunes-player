@@ -28,6 +28,10 @@ class ReactTunesPlayerView extends Component {
       audio.addEventListener("pause", () => {
         this.props.pauseCurrentTune();
       });
+
+      audio.addEventListener("ended", () => {
+        this.props.setNextTune();
+      });
     }
   }
 

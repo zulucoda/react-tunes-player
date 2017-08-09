@@ -167,12 +167,16 @@ describe("React Tunes Player View - Unit Test", () => {
 
         expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
         expect(pauseCurrentTuneMockFunc).toHaveBeenCalledTimes(0);
+        expect(setNextTuneMockFunc).toHaveBeenCalledTimes(1);
 
         simulant.fire(document.body.querySelector("audio"), "play");
         expect(playCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
 
         simulant.fire(document.body.querySelector("audio"), "pause");
         expect(pauseCurrentTuneMockFunc).toHaveBeenCalledTimes(1);
+
+        simulant.fire(document.body.querySelector("audio"), "ended");
+        expect(setNextTuneMockFunc).toHaveBeenCalledTimes(2);
       });
     });
 
