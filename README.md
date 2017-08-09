@@ -89,6 +89,11 @@ Thanks to Pavel Lokhmakov - [Have a look at his blog post on how to create npm p
 
 [Best way to create npm packages with create-react-app](https://medium.com/@lokhmakov/best-way-to-create-npm-packages-with-create-react-app-b24dd449c354)
 
+## Music Credits
+[Royalty Free Music from Bensound](http://www.bensound.com/)
+
+[Dune: The Battle for Arrakis](https://en.wikipedia.org/wiki/Dune_II)
+
 ## License
 MIT License.
 
