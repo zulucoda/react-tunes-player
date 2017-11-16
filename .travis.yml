@@ -1,0 +1,12 @@
+language: node_js
+sudo: false
+node_js:
+  - 6
+  - node
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+after_script:
+  - npm install coveralls
+- 'npm run test | coveralls'
