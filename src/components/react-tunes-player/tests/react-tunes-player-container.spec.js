@@ -6,7 +6,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import configureStore from "redux-mock-store";
-import ReactTunesPlayerContainer from "../react-tunes-player-container";
+import { ReactTunesPlayerContainer } from "../../react-tunes-player";
 import {
   setTunes,
   setCurrentTune,
