@@ -3,7 +3,6 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-"use strict";
 import { connect } from "react-redux";
 import AppView from "./app-view";
 
