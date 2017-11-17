@@ -1,7 +1,7 @@
 
 # React Tunes Player
 [![npm status](https://img.shields.io/npm/v/react-tunes-player.svg)](https://www.npmjs.com/package/react-tunes-player) 
-[![Build Status](https://travis-ci.org/zulucoda/react-tunes-player.svg?branch=master)](https://travis-ci.org/zulucoda/react-tunes-player)  
+[![Build Status](https://travis-ci.org/zulucoda/react-tunes-player.svg?branch=master)](https://travis-ci.org/zulucoda/react-tunes-player) 
 [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-tunes-player/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-tunes-player?branch=master)
 
 
