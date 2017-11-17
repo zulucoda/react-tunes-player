@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/zulucoda/react-tunes-player.svg?branch=master)](https://travis-ci.org/zulucoda/react-tunes-player)  [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-tunes-player/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-tunes-player?branch=master)
 
 # React Tunes Player
+[![npm status](https://img.shields.io/npm/v/react-tunes-player.svg)](https://www.npmjs.org/package/roundrobin) [![Build Status](https://travis-ci.org/zulucoda/react-tunes-player.svg?branch=master)](https://travis-ci.org/zulucoda/react-tunes-player)  [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-tunes-player/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-tunes-player?branch=master)
+
 
 A simple .ogg/.mp3 player. This component uses Redux to store it's state. 
 The benefit of using Redux is the ability of dispatching action to control the player functions.
