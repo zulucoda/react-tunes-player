@@ -1,12 +1,15 @@
 language: node_js
-sudo: false
 node_js:
-  - 6
-  - node
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - npm test -- --coverage # Include coverage when running tests
+  - npm run build
+after_script: # Upload coverage reports
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
 notifications:
   email:
     on_success: change
     on_failure: always
-after_script:
-  - npm install coveralls
-  - 'npm run test | coveralls'
