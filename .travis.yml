@@ -9,4 +9,4 @@ notifications:
     on_failure: always
 after_script:
   - npm install coveralls
-- 'npm run test | coveralls'
+  - 'npm run test | coveralls'
