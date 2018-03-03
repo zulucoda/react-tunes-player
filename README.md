@@ -5,14 +5,14 @@
 [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-tunes-player/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-tunes-player?branch=master)
 
 
-A simple .ogg/.mp3 player. This component uses Redux to store it's state. 
-The benefit of using Redux is the ability of dispatching action to control the player functions.
+A simple .ogg/.mp3 player. This component uses Redux to store its state.
+The benefit of using Redux is the ability to dispatch actions to control the player functions.
 
 #### Example
-- `pauseCurrentTune()` - This action creator will dispatched an action to pause current tune being played.
-- `playCurrentTune()` - This action creator will dispatched an action to play current tune being played.
-- `setNextTune()` - This action creator will dispatched an action to go to the next tune in the tunes list.
-- `setPreviousTune()` - This action creator will dispatched an action to go to the previous tune in the tunes list.
+- `pauseCurrentTune()` - This action creator will dispatch an action to pause current tune being played.
+- `playCurrentTune()` - This action creator will dispatch an action to play the current tune being played.
+- `setNextTune()` - This action creator will dispatch an action to go to the next tune in the tunes list.
+- `setPreviousTune()` - This action creator will dispatch an action to go to the previous tune in the tunes list.
 
 ## Demo
 [Demo - https://react-tunes-player.mfbproject.co.za/](https://react-tunes-player.mfbproject.co.za/)
@@ -93,7 +93,7 @@ export default combineReducers({
 - [A simple React wrapper on the HTML5 audio tag](https://github.com/justinmc/react-audio-player)
 
 ## Development
-NOTE: This repo was created using `create-react-app` and it was ejected to create this npm package.
+NOTE: This repo was created using `create-react-app`, and it was ejected to generate this npm package.
 
 Thanks to Pavel Lokhmakov - [Have a look at his blog post on how to create npm package using `create-react-app`](https://medium.com/@lokhmakov/best-way-to-create-npm-packages-with-create-react-app-b24dd449c354)
 
