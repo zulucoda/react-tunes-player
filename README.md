@@ -10,7 +10,7 @@ The benefit of using Redux is the ability to dispatch actions to control the pla
 
 #### Example
 - `pauseCurrentTune()` - This action creator will dispatch an action to pause current tune being played.
-- `playCurrentTune()` - This action creator will dispatch an action to play the current tune being played.
+- `playCurrentTune()` - This action creator will dispatch an action to play the current tune.
 - `setNextTune()` - This action creator will dispatch an action to go to the next tune in the tunes list.
 - `setPreviousTune()` - This action creator will dispatch an action to go to the previous tune in the tunes list.
 
