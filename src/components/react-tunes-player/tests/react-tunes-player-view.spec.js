@@ -22,7 +22,9 @@ describe("React Tunes Player View - Unit Test", () => {
 
   describe("when not rendered with tunes", () => {
     beforeEach(function() {
-      wrapper = shallow(<ReactTunesPlayerView setTunes={mockFunc} />);
+      wrapper = shallow(<ReactTunesPlayerView setTunes={mockFunc} />, {
+        disableLifecycleMethods: true
+      });
     });
 
     it("should render React Tune Player View with warning message displayed", function() {
@@ -119,7 +121,8 @@ describe("React Tunes Player View - Unit Test", () => {
           tunes={tunes}
           setPreviousTune={setPreviousTuneMockFunc}
           setNextTune={setNextTuneMockFunc}
-        />
+        />,
+        { disableLifecycleMethods: true }
       );
     });
 
