@@ -24,6 +24,7 @@
     "lib": "babel src/components --out-dir lib --copy-files && rm -rf lib/react-tunes-player/tests",
     "test": "node scripts/test.js --coverage --collectCoverageFrom=src/components/**/*.js",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "up-version": "npm version major --force --message \"[ci skip] up version for release\"",
     "precommit": "lint-staged"
   },
   "lint-staged": {
