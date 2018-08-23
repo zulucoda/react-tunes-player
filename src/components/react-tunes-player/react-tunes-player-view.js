@@ -53,57 +53,55 @@ class ReactTunesPlayerView extends Component {
       <div className="react-tunes-player g-z-index-header m-visible">
         <div className="react-tunes-player__inner">
           <div className="react-tunes-player__wrapper l-container l-fullwidth">
-            {tunes.length > 0
-              ? <div id="mainwrap">
-                  <div id="currentAlbumPlaying">
-                    <img
-                      src={this.props._current.album}
-                      alt={this.props._current.name}
-                      title={this.props._current.name}
-                    />
-                  </div>
-                  <div id="nowPlay">
-                    <span>
-                      {this.props._current.name}
-                    </span>
-                  </div>
-                  <div id="tracks">
-                    <a
-                      id="btnPrev"
-                      onClick={() => this.props.setPreviousTune()}
+            {tunes.length > 0 ? (
+              <div id="mainwrap">
+                <div id="currentAlbumPlaying">
+                  <img
+                    src={this.props._current.album}
+                    alt={this.props._current.name}
+                    title={this.props._current.name}
+                  />
+                </div>
+                <div id="nowPlay">
+                  <span>{this.props._current.name}</span>
+                </div>
+                <div id="tracks">
+                  <a id="btnPrev" onClick={() => this.props.setPreviousTune()}>
+                    &laquo;
+                  </a>
+                  <a id="btnNext" onClick={() => this.props.setNextTune()}>
+                    &raquo;
+                  </a>
+                </div>
+                <div id="audiowrap">
+                  <div id="audio0">
+                    <audio
+                      autoPlay={this.props.autoPlay}
+                      preload="true"
+                      ref={ref => {
+                        this.tunesPlayer = ref;
+                      }}
+                      controls="controls"
+                      src={this.props._current.tune}
                     >
-                      &laquo;
-                    </a>
-                    <a id="btnNext" onClick={() => this.props.setNextTune()}>
-                      &raquo;
-                    </a>
-                  </div>
-                  <div id="audiowrap">
-                    <div id="audio0">
-                      <audio
-                        autoPlay={this.props.autoPlay}
-                        preload
-                        ref={ref => {
-                          this.tunesPlayer = ref;
-                        }}
-                        controls="controls"
-                        src={this.props._current.tune}
-                      >
-                        Your browser does not support HTML5 Audio!
-                      </audio>
-                    </div>
+                      Your browser does not support HTML5 Audio!
+                    </audio>
                   </div>
                 </div>
-              : <div className="warning-wrapper">
-                  {" "}<span>
-                    <img
-                      src={warningImg}
-                      alt="Warning!"
-                      title="Warning! No tunes loaded in player"
-                    />
-                  </span>{" "}
-                  <span>Warning! No tunes loaded in player.</span>
-                </div>}
+              </div>
+            ) : (
+              <div className="warning-wrapper">
+                {" "}
+                <span>
+                  <img
+                    src={warningImg}
+                    alt="Warning!"
+                    title="Warning! No tunes loaded in player"
+                  />
+                </span>{" "}
+                <span>Warning! No tunes loaded in player.</span>
+              </div>
+            )}
           </div>
         </div>
       </div>
