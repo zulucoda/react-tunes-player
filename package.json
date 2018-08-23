@@ -33,6 +33,15 @@
       "git add"
     ]
   },
+  "keywords": [
+    "react",
+    "reactjs",
+    "tunes",
+    "player",
+    "audio",
+    "mp3",
+    "ogg"
+  ],
   "devDependencies": {
     "autoprefixer": "7.1.1",
     "babel-cli": "^6.24.1",
