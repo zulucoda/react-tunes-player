@@ -40,44 +40,44 @@ describe("React Tunes Player Container and View - Unit Test", () => {
   });
 
   it("should mapStateToProp tunes to _tunes", function() {
-    expect(wrapper.node.props._tunes).toEqual(
+    expect(wrapper.props()._tunes).toEqual(
       initialState.reactTunesPlayerReducer.tunes
     );
   });
 
   it("should mapStateToProp current to _current", function() {
-    expect(wrapper.node.props._current).toEqual(
+    expect(wrapper.props()._current).toEqual(
       initialState.reactTunesPlayerReducer.current
     );
   });
 
   it("should mapStateToProp player to _player", function() {
-    expect(wrapper.node.props._player).toEqual(
+    expect(wrapper.props()._player).toEqual(
       initialState.reactTunesPlayerReducer.player
     );
   });
 
   it("should mapDispatchToProps setTunes", function() {
-    expect(wrapper.node.props.setNextTune()).toEqual(setNextTune());
+    expect(wrapper.props().setNextTune()).toEqual(setNextTune());
   });
 
   it("should mapDispatchToProps setPreviousTune", function() {
-    expect(wrapper.node.props.setPreviousTune()).toEqual(setPreviousTune());
+    expect(wrapper.props().setPreviousTune()).toEqual(setPreviousTune());
   });
 
   it("should mapDispatchToProps setTunes", function() {
-    expect(wrapper.node.props.setTunes()).toEqual(setTunes());
+    expect(wrapper.props().setTunes()).toEqual(setTunes());
   });
 
   it("should mapDispatchToProps setCurrentTune", function() {
-    expect(wrapper.node.props.setCurrentTune()).toEqual(setCurrentTune());
+    expect(wrapper.props().setCurrentTune()).toEqual(setCurrentTune());
   });
 
   it("should mapDispatchToProps playCurrentTune", function() {
-    expect(wrapper.node.props.playCurrentTune()).toEqual(playCurrentTune());
+    expect(wrapper.props().playCurrentTune()).toEqual(playCurrentTune());
   });
 
   it("should mapDispatchToProps pauseCurrentTune", function() {
-    expect(wrapper.node.props.pauseCurrentTune()).toEqual(pauseCurrentTune());
+    expect(wrapper.props().pauseCurrentTune()).toEqual(pauseCurrentTune());
   });
 });
