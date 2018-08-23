@@ -2,7 +2,7 @@
   "name": "react-tunes-player",
   "author": "Muzikayise Flynn Buthelezi (zuluCoda)",
   "description": "A simple .ogg/.mp3 player.",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "lib/react-tunes-player/index.js",
   "private": false,
   "dependencies": {
@@ -33,6 +33,15 @@
       "git add"
     ]
   },
+  "keywords": [
+    "react",
+    "reactjs",
+    "tunes",
+    "player",
+    "audio",
+    "mp3",
+    "ogg"
+  ],
   "devDependencies": {
     "autoprefixer": "7.1.1",
     "babel-cli": "^6.24.1",
