@@ -11,7 +11,7 @@ import {
   playCurrentTune,
   pauseCurrentTune,
   setNextTune,
-  setPreviousTune
+  setPreviousTune, setSeekTimeTune, setTuneDuration
 } from "./react-tunes-player-reducer";
 import ReactTunesPlayerView from "./react-tunes-player-view";
 
@@ -29,7 +29,9 @@ export const mapDispatchToProps = dispatch =>
       playCurrentTune,
       pauseCurrentTune,
       setNextTune,
-      setPreviousTune
+      setPreviousTune,
+      setSeekTimeTune,
+      setTuneDuration
     },
     dispatch
   );

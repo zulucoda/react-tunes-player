@@ -13,7 +13,9 @@ const initialState = {
     album: ""
   },
   player: {
-    isPlaying: false
+    isPlaying: false,
+    time: 0,
+    duration: 0,
   }
 };
 
@@ -27,6 +29,9 @@ const REACT_TUNES_PLAYER_PAUSE_CURRENT_TUNE =
 const REACT_TUNES_PLAYER_SET_NEXT_TUNE = "REACT_TUNES_PLAYER_SET_NEXT_TUNE";
 const REACT_TUNES_PLAYER_SET_PREVIOUS_TUNE =
   "REACT_TUNES_PLAYER_SET_PREVIOUS_TUNE";
+const REACT_TUNES_PLAYER_SET_SEEK_TIME_TUNE =
+  "REACT_TUNES_PLAYER_SET_SEEK_TIME_TUNE";
+const REACT_TUNES_PLAYER_SET_TUNE_DURATION = 'REACT_TUNES_PLAYER_SET_TUNE_DURATION';
 
 export const setTunes = payload => ({
   type: REACT_TUNES_PLAYER_SET_TUNES,
@@ -54,6 +59,16 @@ export const setPreviousTune = () => ({
   type: REACT_TUNES_PLAYER_SET_PREVIOUS_TUNE
 });
 
+export const setSeekTimeTune = payload => ({
+  type: REACT_TUNES_PLAYER_SET_SEEK_TIME_TUNE,
+  payload
+});
+
+export const setTuneDuration = payload => ({
+  type: REACT_TUNES_PLAYER_SET_TUNE_DURATION,
+  payload
+});
+
 const reactTunesPlayerReducer = (state = initialState, action) => {
   switch (action.type) {
     case REACT_TUNES_PLAYER_SET_TUNES:
@@ -72,6 +87,7 @@ const reactTunesPlayerReducer = (state = initialState, action) => {
       return {
         ...state,
         player: {
+          ...state.player,
           isPlaying: true
         }
       };
@@ -79,7 +95,24 @@ const reactTunesPlayerReducer = (state = initialState, action) => {
       return {
         ...state,
         player: {
+          ...state.player,
           isPlaying: false
+        }
+      };
+    case REACT_TUNES_PLAYER_SET_SEEK_TIME_TUNE:
+      return {
+        ...state,
+        player: {
+          ...state.player,
+          time: action.payload
+        }
+      };
+      case REACT_TUNES_PLAYER_SET_TUNE_DURATION:
+      return {
+        ...state,
+        player: {
+          ...state.player,
+          duration: action.payload
         }
       };
     case REACT_TUNES_PLAYER_SET_NEXT_TUNE:
