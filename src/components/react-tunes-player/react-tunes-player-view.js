@@ -9,6 +9,27 @@ import "./assets/sass/react-tunes-player.css";
 import warningImg from "./assets/images/warning_48.png";
 
 class ReactTunesPlayerView extends Component {
+
+  constructor(props){
+    super(props);
+    this.onPlay = this.onPlay.bind(this);
+    this.onPause = this.onPause.bind(this);
+    this.onEnded = this.onEnded.bind(this);
+  }
+
+  onPlay () {
+    this.props.playCurrentTune();
+  }
+
+  onPause () {
+    this.props.pauseCurrentTune();
+  }
+
+  onEnded () {
+    this.props.setNextTune();
+    this.props.playCurrentTune();
+  }
+
   componentWillMount() {
     const tunes = this.props.tunes || [];
     this.props.setTunes(tunes);
@@ -21,18 +42,9 @@ class ReactTunesPlayerView extends Component {
     const tunes = this.props.tunes || [];
     if (tunes.length > 0) {
       const audio = this.tunesPlayer;
-      audio.addEventListener("play", () => {
-        this.props.playCurrentTune();
-      });
-
-      audio.addEventListener("pause", () => {
-        this.props.pauseCurrentTune();
-      });
-
-      audio.addEventListener("ended", () => {
-        this.props.setNextTune();
-        this.props.playCurrentTune();
-      });
+      audio.addEventListener("play", this.onPlay);
+      audio.addEventListener("pause", this.onPause);
+      audio.addEventListener("ended", this.onEnded);
     }
   }
 
@@ -45,6 +57,13 @@ class ReactTunesPlayerView extends Component {
         this.tunesPlayer.pause();
       }
     }
+  }
+
+  componentWillUnmount () {
+    const audio = this.tunesPlayer;
+    audio.removeEventListener("play", this.onPlay);
+    audio.removeEventListener("pause", this.onPause);
+    audio.removeEventListener("ended", this.onEnded);
   }
 
   render() {
