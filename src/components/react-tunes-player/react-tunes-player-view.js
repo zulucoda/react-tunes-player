@@ -92,6 +92,10 @@ const Controls = styled.div`
     @media ${device.mobileS} {
       margin: 1.8rem 0 0 0;
     }
+    
+    @media ${device.laptop} {
+    margin: 1.2rem 0 0 0;
+   }
   `;
 
 const Btn = styled.a`
@@ -110,6 +114,10 @@ const Btn = styled.a`
         padding: 0 1rem 0 1rem;
     }
     
+    @media ${device.laptop} {
+          font-size: 2em;
+    }
+    
     > svg {
      width: 1rem;
      height: 1rem;
@@ -124,6 +132,11 @@ const Btn = styled.a`
     @media ${device.tablet} {
         width: 0.8rem;
         height: 0.8rem;
+    }
+    
+    @media ${device.laptop} {
+          width: 1rem;
+         height: 1rem;
     }
      
      &:hover {
@@ -199,6 +212,10 @@ const Volume = styled(Controls)`
     @media ${device.mobileS} {
         display: none;
     }
+    
+    @media ${device.laptop} {
+        display: inline;
+   }
 `;
 
 const HighVolume = styled(Btn)`
