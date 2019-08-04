@@ -4,6 +4,7 @@
  * Copyright zulucoda - mfbproject
  */
 import _findIndex from "lodash/findIndex";
+import { HIGH_VOLUME } from './constants'
 
 const initialState = {
   tunes: [],
@@ -16,6 +17,7 @@ const initialState = {
     isPlaying: false,
     time: 0,
     duration: 0,
+    volume: HIGH_VOLUME
   }
 };
 
@@ -32,6 +34,7 @@ const REACT_TUNES_PLAYER_SET_PREVIOUS_TUNE =
 const REACT_TUNES_PLAYER_SET_SEEK_TIME_TUNE =
   "REACT_TUNES_PLAYER_SET_SEEK_TIME_TUNE";
 const REACT_TUNES_PLAYER_SET_TUNE_DURATION = 'REACT_TUNES_PLAYER_SET_TUNE_DURATION';
+const REACT_TUNES_PLAYER_SET_VOLUME = 'REACT_TUNES_PLAYER_SET_VOLUME';
 
 export const setTunes = payload => ({
   type: REACT_TUNES_PLAYER_SET_TUNES,
@@ -66,6 +69,11 @@ export const setSeekTimeTune = payload => ({
 
 export const setTuneDuration = payload => ({
   type: REACT_TUNES_PLAYER_SET_TUNE_DURATION,
+  payload
+});
+
+export const setVolume = payload => ({
+  type: REACT_TUNES_PLAYER_SET_VOLUME,
   payload
 });
 
@@ -113,6 +121,14 @@ const reactTunesPlayerReducer = (state = initialState, action) => {
         player: {
           ...state.player,
           duration: action.payload
+        }
+      };
+      case REACT_TUNES_PLAYER_SET_VOLUME:
+      return {
+        ...state,
+        player: {
+          ...state.player,
+          volume: action.payload
         }
       };
     case REACT_TUNES_PLAYER_SET_NEXT_TUNE:
