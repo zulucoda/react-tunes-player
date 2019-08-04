@@ -5,10 +5,10 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./assets/sass/react-tunes-player.css";
 import warningImg from "./assets/images/warning_48.png";
 import styled from 'styled-components';
-import { HIGH_VOLUME, LOW_VOLUME, MEDIUM_VOLUME, MUTE_VOLUME } from './constants'
+import { HIGH_VOLUME, LOW_VOLUME, MEDIUM_VOLUME, MUTE_VOLUME } from './constants';
+import device from './devices';
 
 
 const ReactTunePlayerContainer = styled.div`
@@ -56,15 +56,27 @@ const CurrentAlbumPlaying = styled.div`
     margin: 0 1rem 0 0;
     img {
       height: 75px;
+      @media ${device.mobileS} {
+        display: none;
+      }
     }
   `;
 
 const NowPlaying = styled.div`
     margin: 2rem 1rem 0 0;
+    @media ${device.mobileS} {
+      margin: 2rem 0 0 0;
+      font-size: 0.7rem;
+      flex-grow:2;
+    }
   `;
 
 const Controls = styled.div`
     margin: 1.2rem 0 0 0;
+    
+    @media ${device.mobileS} {
+      margin: 1.8rem 0 0 0;
+    }
   `;
 
 const Btn = styled.a`
@@ -72,11 +84,22 @@ const Btn = styled.a`
     color: #231F20;
     font-size: 2em;
     padding: 0 1rem 0 1rem;
+    
+    @media ${device.mobileS} {
+      font-size: 0.7rem;
+      padding: 1rem 0.5rem 0 0.5rem;
+    }
+    
     > svg {
      width: 1rem;
      height: 1rem;
      cursor: pointer;
      fill: #594C4F;
+     
+     @media ${device.mobileS} {
+      width: 0.7rem;
+      height: 0.7rem;
+    }
      
      &:hover {
       fill: #E93733;
@@ -104,6 +127,10 @@ const SeekTune = styled.div`
     margin: 2rem 0 0 0;
     flex-grow:2;
     
+    @media ${device.mobileS} {
+        display: none;
+    }
+    
     > progress {
       width: 100%;
       
@@ -129,9 +156,17 @@ const SeekTune = styled.div`
 
 const SeekTime = styled.div`
     margin: 2rem 0 0 1rem;
+    @media ${device.mobileS} {
+    margin: 2rem 1rem 0 1rem;
+        font-size: 0.7rem;
+    }
 `;
 
-const Volume = styled(Controls)``;
+const Volume = styled(Controls)`
+    @media ${device.mobileS} {
+        display: none;
+    }
+`;
 
 const HighVolume = styled(Btn)`
  > svg {
