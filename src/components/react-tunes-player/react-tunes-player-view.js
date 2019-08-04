@@ -59,6 +59,10 @@ const CurrentAlbumPlaying = styled.div`
       @media ${device.mobileS} {
         display: none;
       }
+      
+      @media ${device.mobileL} {
+        display: inline;
+      }
     }
   `;
 
@@ -69,6 +73,17 @@ const NowPlaying = styled.div`
       font-size: 0.7rem;
       flex-grow:2;
     }
+    
+    @media ${device.mobileL} {
+        display: inline;
+        flex-grow:1;
+      }
+      
+   @media ${device.tablet} {
+        display: inline;
+        font-size: 1rem;
+        margin: 2rem 1rem 0 0;
+   }
   `;
 
 const Controls = styled.div`
@@ -90,6 +105,11 @@ const Btn = styled.a`
       padding: 1rem 0.5rem 0 0.5rem;
     }
     
+    @media ${device.tablet} {
+        font-size: 1.3em;
+        padding: 0 1rem 0 1rem;
+    }
+    
     > svg {
      width: 1rem;
      height: 1rem;
@@ -99,6 +119,11 @@ const Btn = styled.a`
      @media ${device.mobileS} {
       width: 0.7rem;
       height: 0.7rem;
+    }
+    
+    @media ${device.tablet} {
+        width: 0.8rem;
+        height: 0.8rem;
     }
      
      &:hover {
@@ -131,6 +156,10 @@ const SeekTune = styled.div`
         display: none;
     }
     
+    @media ${device.mobileL} {
+        display: inline;
+    }
+    
     > progress {
       width: 100%;
       
@@ -157,8 +186,12 @@ const SeekTune = styled.div`
 const SeekTime = styled.div`
     margin: 2rem 0 0 1rem;
     @media ${device.mobileS} {
-    margin: 2rem 1rem 0 1rem;
-        font-size: 0.7rem;
+      margin: 2rem 1rem 0 1rem;
+      font-size: 0.7rem;
+    }
+    
+    @media ${device.tablet} {
+        font-size: 1rem;
     }
 `;
 
