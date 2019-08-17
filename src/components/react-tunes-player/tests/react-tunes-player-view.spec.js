@@ -45,7 +45,7 @@ describe("React Tunes Player View - Unit Test", () => {
         expect(
           ReactTunesPlayerView.prototype.componentDidMount
         ).toHaveBeenCalledTimes(1);
-        expect(wrapper.find(".warning-wrapper").length).toEqual(1);
+        expect(wrapper.text()).toEqual('Warning! No tunes loaded in player.');
       });
     });
 

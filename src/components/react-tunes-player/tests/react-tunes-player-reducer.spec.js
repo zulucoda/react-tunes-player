@@ -11,6 +11,7 @@ import ReactTunesPlayerReducer, {
   setNextTune,
   setPreviousTune
 } from "../react-tunes-player-reducer";
+import { HIGH_VOLUME } from '../constants'
 
 describe("React Tune Player Reducer - Unit Test", () => {
   function stateBefore() {
@@ -22,7 +23,10 @@ describe("React Tune Player Reducer - Unit Test", () => {
         album: ""
       },
       player: {
-        isPlaying: false
+        isPlaying: false,
+        time: 0,
+        duration: 0,
+        volume: HIGH_VOLUME
       }
     };
   }
@@ -131,6 +135,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
       const expected = {
         ...stateBefore(),
         player: {
+          ...stateBefore().player,
           isPlaying: true
         }
       };
@@ -144,6 +149,7 @@ describe("React Tune Player Reducer - Unit Test", () => {
       const _stateBefore = {
         ...stateBefore(),
         player: {
+          ...stateBefore().player,
           isPlaying: true
         }
       };

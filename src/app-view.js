@@ -16,18 +16,19 @@ class App extends Component {
         </p>
         <div>
           <ReactTunesPlayerContainer
-            tunes={[
-              {
-                tune: "/assets/audio/the_lego_tune.ogg",
-                name: "The lego tune",
-                album: "/assets/images/dune.jpg"
-              },
-              {
-                tune: "/assets/audio/bensound-funkysuspense.mp3",
-                name: "Funky Suspense",
-                album: "/assets/images/funkysuspense.jpg"
-              }
-            ]}
+            // tunes={[
+            //   {
+            //     tune: "/assets/audio/the_lego_tune.ogg",
+            //     name: "The lego tune",
+            //     album: "/assets/images/dune.jpg"
+            //   },
+            //   {
+            //     tune: "/assets/audio/bensound-funkysuspense.mp3",
+            //     name: "Funky Suspense",
+            //     album: "/assets/images/funkysuspense.jpg"
+            //   }
+            // ]}
+            tunes={[]}
           />
         </div>
       </div>

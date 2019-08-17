@@ -5,7 +5,6 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import warningImg from "./assets/images/warning_48.png";
 import styled from 'styled-components';
 import { HIGH_VOLUME, LOW_VOLUME, MEDIUM_VOLUME, MUTE_VOLUME } from './constants';
 import device from './devices';
@@ -247,6 +246,24 @@ const AudioWrapper = styled.div`
     display: none;
   `;
 
+const WarningWrapper = styled.div`
+   display: flex;
+   flex-direction: row; 
+   justify-content: center;
+       
+    > svg {
+      width: 3rem;
+      height: 3rem;
+      fill: #E93733;
+    }
+`;
+
+const WarningText = styled.span`
+  padding: 0.5rem 0 0 0;
+  font-size: 2rem;
+  vertical-align: center;
+`;
+
 
 class ReactTunesPlayerView extends Component {
 
@@ -348,12 +365,14 @@ class ReactTunesPlayerView extends Component {
   }
 
   render() {
-    const { _current, _player, playCurrentTune, pauseCurrentTune, setNextTune, setPreviousTune, setVolume } = this.props;
+    const { _current, _player, playCurrentTune, pauseCurrentTune, setNextTune, setPreviousTune, setVolume, autoPlay } = this.props;
+    const tunes = this.props.tunes || [];
     return (
       <ReactTunePlayerContainer>
         <TunesInner>
           <TunesWrapper>
-            <MainWrapper>
+            {tunes.length > 0 ?
+              (<MainWrapper>
               <CurrentAlbumPlaying>
                 <img alt={_current.name} src={_current.album}/>
               </CurrentAlbumPlaying>
@@ -388,7 +407,10 @@ class ReactTunesPlayerView extends Component {
                 >
                 </audio>
               </AudioWrapper>
-            </MainWrapper>
+            </MainWrapper> ): (<WarningWrapper>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M32 464h448L256 48 32 464zm248-64h-48v-48h48v48zm0-80h-48v-96h48v96z"/></svg>
+                <WarningText>Warning! No tunes loaded in player.</WarningText>
+              </WarningWrapper>)}
           </TunesWrapper>
         </TunesInner>
       </ReactTunePlayerContainer>
@@ -397,7 +419,7 @@ class ReactTunesPlayerView extends Component {
 }
 
 ReactTunesPlayerView.defaultProps = {
-  autoPlay: true
+  autoPlay: false
 };
 
 ReactTunesPlayerView.propTypes = {
