@@ -4,7 +4,7 @@
  * Copyright zulucoda - mfbproject
  */
 import React, { useEffect, useState } from 'react';
-import { array } from 'prop-types';
+import { arrayOf, exact, string } from 'prop-types';
 import {
   HIGH_VOLUME,
   LOW_VOLUME,
@@ -176,5 +176,11 @@ export const Player = ({ tunes }) => {
 };
 
 Player.propTypes = {
-  tunes: array.isRequired,
+  tunes: arrayOf(
+    exact({
+      tune: string.isRequired,
+      name: string.isRequired,
+      album: string.isRequired,
+    }),
+  ).isRequired,
 };
