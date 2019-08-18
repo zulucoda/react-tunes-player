@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 upgrade to using hooks
 
+## [4.0.1] - 2019-08-18
+### Changed
+- update README.md [@zulucoda](https://github.com/zulucoda).
+
 ## [4.0.0] - 2019-08-18
 ### Changed
 - projected updated [@zulucoda](https://github.com/zulucoda).
