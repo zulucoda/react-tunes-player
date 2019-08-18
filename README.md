@@ -23,32 +23,35 @@ yarn add react-tunes-player
 
 ## Usage
 
-## Example Repo on how to use `react-tunes-player`
-[https://github.com/zulucoda/react-tunes-player-test](https://github.com/zulucoda/react-tunes-player-test)
-
-### Import `ReactTunesPlayer` into your component
-
 ````javascript
-import ReactTunesPlayer from "react-tunes-player";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactTunesPlayer from 'react-tunes-player';
+
+const data = [
+  {
+    tune:
+      'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg',
+    name: 'The lego tune',
+    album: 'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
+  },
+  {
+    tune:
+      'https://react-tunes-player.mfbproject.co.za/assets/audio/bensound-funkysuspense.mp3',
+    name: 'Funky Suspense',
+    album:
+      'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',
+  },
+];
+
+ReactDOM.render(
+  <ReactTunesPlayer tunes={data} />,
+  document.querySelector('.app'),
+);
 ````
 
-````javascript
-
-<ReactTunesPlayer
-    tunes={[
-             {
-               tune: "https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg",
-               name: "The lego tune",
-               album: "https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg"
-             },
-             {
-               tune: "https://react-tunes-player.mfbproject.co.za/assets/audio/bensound-funkysuspense.mp3",
-               name: "Funky Suspense",
-               album: "https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg"
-             }
-          ]}
-/>
-````
+### Example folder on how to use `react-tunes-player`
+[example](example)
 
 ### Tune Type
 
