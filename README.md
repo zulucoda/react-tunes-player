@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/zulucoda/react-tunes-player.svg?branch=master)](https://travis-ci.org/zulucoda/react-tunes-player) 
 [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-tunes-player/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-tunes-player?branch=master)
 
-A simple .ogg/.mp3 player. 
+A simple responsive .ogg/.mp3 player.  
 
 [![react-tunes-player-example](react-tunes-player-example.gif)](https://react-tunes-player.mfbproject.co.za/)
 
@@ -88,6 +88,20 @@ Example:
  }
 ]
 ```
+
+## Responsive Design
+### 375 Mobile
+ ![react-tunes-player-mobile.png](react-tunes-player-mobile.png)
+  
+### 768 Tablet
+ ![react-tunes-player-tablet.png](react-tunes-player-tablet.png)
+
+### 1024 Laptop
+ ![react-tunes-player-laptop](react-tunes-player-laptop.png)
+
+*Greater than 1024 is the same laptop*
+
+
 
 ## Music Credits
 [Royalty Free Music from Bensound](http://www.bensound.com/)

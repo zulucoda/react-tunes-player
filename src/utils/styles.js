@@ -47,41 +47,30 @@ export const MainWrapper = styled.div`
 export const CurrentAlbumPlaying = styled.div`
   margin: 0 1rem 0 0;
   img {
-    height: 75px;
-    @media ${device.mobileS} {
-      display: none;
-    }
+    display: none;
 
     @media ${device.mobileL} {
       display: inline;
+      height: 75px;
     }
   }
 `;
 export const NowPlaying = styled.div`
-  margin: 2rem 1rem 0 0;
-  @media ${device.mobileS} {
-    margin: 2rem 0 0 0;
-    font-size: 0.7rem;
-    flex-grow: 2;
-  }
+  margin: 2rem 0 0 0;
+  font-size: 0.7rem;
+  flex-grow: 2;
 
   @media ${device.mobileL} {
-    display: inline;
     flex-grow: 1;
   }
 
   @media ${device.tablet} {
-    display: inline;
     font-size: 1rem;
     margin: 2rem 1rem 0 0;
   }
 `;
 export const Controls = styled.div`
-  margin: 1.2rem 0 0 0;
-
-  @media ${device.mobileS} {
-    margin: 1.8rem 0 0 0;
-  }
+  margin: 1.8rem 0 0 0;
 
   @media ${device.laptop} {
     margin: 1.2rem 0 0 0;
@@ -90,13 +79,8 @@ export const Controls = styled.div`
 const Btn = styled.a`
   background-color: transparent;
   color: #231f20;
-  font-size: 2em;
-  padding: 0 1rem 0 1rem;
-
-  @media ${device.mobileS} {
-    font-size: 0.7rem;
-    padding: 1rem 0.5rem 0 0.5rem;
-  }
+  font-size: 0.7rem;
+  padding: 1rem 0.5rem 0 0.5rem;
 
   @media ${device.tablet} {
     font-size: 1.3em;
@@ -105,18 +89,14 @@ const Btn = styled.a`
 
   @media ${device.laptop} {
     font-size: 2em;
+    padding: 0 1rem 0 1rem;
   }
 
   > svg {
-    width: 1rem;
-    height: 1rem;
     cursor: pointer;
     fill: #594c4f;
-
-    @media ${device.mobileS} {
-      width: 0.7rem;
-      height: 0.7rem;
-    }
+    width: 0.7rem;
+    height: 0.7rem;
 
     @media ${device.tablet} {
       width: 0.8rem;
@@ -146,17 +126,12 @@ export const PauseTune = styled(Btn)`
   }
 `;
 export const SeekTune = styled.div`
-  margin: 2rem 0 0 0;
-  flex-grow: 2;
-
-  @media ${device.mobileS} {
-    display: none;
-  }
-
-  @media ${device.mobileL} {
+  display: none;
+  @media ${device.tablet} {
     display: inline;
+    margin: 2rem 0 0 0;
+    flex-grow: 2;
   }
-
   > progress {
     width: 100%;
 
@@ -180,21 +155,15 @@ export const SeekTune = styled.div`
   }
 `;
 export const SeekTime = styled.div`
-  margin: 2rem 0 0 1rem;
-  @media ${device.mobileS} {
-    margin: 2rem 1rem 0 1rem;
-    font-size: 0.7rem;
-  }
+  margin: 2rem 1rem 0 1rem;
+  font-size: 0.7rem;
 
   @media ${device.tablet} {
     font-size: 1rem;
   }
 `;
 export const Volume = styled(Controls)`
-  @media ${device.mobileS} {
-    display: none;
-  }
-
+  display: none;
   @media ${device.laptop} {
     display: inline;
   }
