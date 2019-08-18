@@ -6,7 +6,7 @@
 
 A simple responsive .ogg/.mp3 player.  
 
-[![react-tunes-player-example](react-tunes-player-example.gif)](https://react-tunes-player.mfbproject.co.za/)
+[![react-tunes-player-example](https://raw.githubusercontent.com/zulucoda/react-tunes-player/master/react-tunes-player-example.gif)](https://react-tunes-player.mfbproject.co.za/)
 
 ## Demo
 [Demo - https://react-tunes-player.mfbproject.co.za/](https://react-tunes-player.mfbproject.co.za/)
@@ -51,7 +51,7 @@ ReactDOM.render(
 ````
 
 ### Example folder on how to use `react-tunes-player`
-[example](example)
+[example](https://github.com/zulucoda/react-tunes-player/tree/master/example)
 
 ### Tune Type
 
@@ -91,13 +91,13 @@ Example:
 
 ## Responsive Design
 ### 375 Mobile
- ![react-tunes-player-mobile.png](react-tunes-player-mobile.png)
+ ![react-tunes-player-mobile.png](https://raw.githubusercontent.com/zulucoda/react-tunes-player/master/react-tunes-player-mobile.png)
   
 ### 768 Tablet
- ![react-tunes-player-tablet.png](react-tunes-player-tablet.png)
+ ![react-tunes-player-tablet.png](https://raw.githubusercontent.com/zulucoda/react-tunes-player/master/react-tunes-player-tablet.png)
 
 ### 1024 Laptop
- ![react-tunes-player-laptop](react-tunes-player-laptop.png)
+ ![react-tunes-player-laptop](https://raw.githubusercontent.com/zulucoda/react-tunes-player/master/react-tunes-player-laptop.png)
 
 *Greater than 1024 is the same laptop*
 
