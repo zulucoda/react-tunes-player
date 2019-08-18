@@ -25,7 +25,7 @@ npm install --save react-tunes-player
 ### Import `ReactTunesPlayer` into your component
 
 ````javascript
-import { ReactTunesPlayer } from "react-tunes-player";
+import ReactTunesPlayer from "react-tunes-player";
 ````
 
 ````javascript
@@ -48,11 +48,11 @@ import { ReactTunesPlayer } from "react-tunes-player";
 
 ### Tune Type
 
-| Name | Description | Example |
-| :------| :-----------| :-----------| 
-| tune  | This is the tune location | `tune: 'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg'` |
-| name  | This is the tune name | `name: 'The lego tune'` |
-| album  | This is the tune album art location | `album: 'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg'` |
+| Name | Type | Description | Example |
+| :----| :----| :-----------| :-----------| 
+| tune  | string | This is the tune location | `tune: 'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg'` |
+| name  | string | This is the tune name | `name: 'The lego tune'` |
+| album  | string | This is the tune album art location | `album: 'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg'` |
 
 Example:
 ```
