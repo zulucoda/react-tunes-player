@@ -16,6 +16,10 @@ A simple .ogg/.mp3 player.
 ````
 npm install --save react-tunes-player
 ````
+or
+````
+yarn add react-tunes-player
+````
 
 ## Usage
 
