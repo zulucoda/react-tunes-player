@@ -4,7 +4,8 @@
   "description": "Simple example app for react-tunes-player",
   "main": "dist/bundle.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --progress --colors"
+    "start": "webpack-dev-server --config webpack.config.js --progress --colors",
+    "build": "webpack -p --config webpack.config.js --progress --colors"
   },
   "author": "Muzikayise Flynn Buthelezi (zuluCoda)",
   "license": "MIT",
