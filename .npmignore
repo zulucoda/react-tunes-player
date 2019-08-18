@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+src/
+coverage/
+config/
+public/
+scripts/
+build/
+example/
+.idea
+react-swift-slider-example.gif
