@@ -63,6 +63,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders player with
         >
           <a
             class="sc-gzVnrw sc-htoDjs gXgYpX"
+            data-testid="previous-tune"
             title="Previous tune"
           >
             <svg

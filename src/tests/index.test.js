@@ -47,7 +47,7 @@ describe('React Tunes Player - Unit Test', () => {
 
     test('render previous tune onPrevTune click', () => {
       const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
-      fireEvent.click(getByTestId('next-tune'));
+      fireEvent.click(getByTestId('previous-tune'));
 
       expect(getByTestId('current-tune-name')).toContainHTML('Funky Suspense');
     });
