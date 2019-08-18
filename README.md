@@ -58,9 +58,9 @@ Example:
 ```
 // Tune Type
 {
-     tune: [URL/LOCATION_FOR_TUNE],
-     name: [NAME_OF_THE_TUNE],
-     album: [URL/LOCATION_FOR_ALBUM_ART]
+     tune: "/assets/audio/the_lego_tune.ogg",
+     name: "The lego tune",
+     album: "/assets/images/dune.jpg"
 }
 ```
 
