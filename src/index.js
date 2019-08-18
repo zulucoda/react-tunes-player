@@ -1,15 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import AppContainer from "./app-container";
-import { Provider } from "react-redux";
-import store from "./store";
-import registerServiceWorker from "./registerServiceWorker";
-
-ReactDOM.render(
-  <Provider store={store}>
-    <AppContainer />
-  </Provider>,
-  document.getElementById("root")
-);
-registerServiceWorker();
+/**
+ * Created by Muzikayise Flynn Buthelezi (zuluCoda) on 2019/08/18.
+ * Copyright mfbproject.co.za - muzi@mfbproject.co.za
+ * Copyright zulucoda - mfbproject
+ */
+import { Player as ReactTunesPlayer } from './components/player';
+export default ReactTunesPlayer;

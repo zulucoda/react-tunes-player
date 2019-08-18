@@ -4,100 +4,104 @@
 [![Build Status](https://travis-ci.org/zulucoda/react-tunes-player.svg?branch=master)](https://travis-ci.org/zulucoda/react-tunes-player) 
 [![Coverage Status](https://coveralls.io/repos/github/zulucoda/react-tunes-player/badge.svg?branch=master)](https://coveralls.io/github/zulucoda/react-tunes-player?branch=master)
 
+A simple responsive .ogg/.mp3 player.  
 
-A simple .ogg/.mp3 player. This component uses Redux to store its state.
-The benefit of using Redux is the ability to dispatch actions to control the player functions.
-
-#### Example
-- `pauseCurrentTune()` - This action creator will dispatch an action to pause current tune being played.
-- `playCurrentTune()` - This action creator will dispatch an action to play the current tune.
-- `setNextTune()` - This action creator will dispatch an action to go to the next tune in the tunes list.
-- `setPreviousTune()` - This action creator will dispatch an action to go to the previous tune in the tunes list.
+[![react-tunes-player-example](react-tunes-player-example.gif)](https://react-tunes-player.mfbproject.co.za/)
 
 ## Demo
 [Demo - https://react-tunes-player.mfbproject.co.za/](https://react-tunes-player.mfbproject.co.za/)
-
-## Dependency
-- Redux
 
 ## Installation
 
 ````
 npm install --save react-tunes-player
 ````
+or
+````
+yarn add react-tunes-player
+````
 
 ## Usage
 
-## Example Repo on how to use `react-tunes-player`
-[https://github.com/zulucoda/react-tunes-player-test](https://github.com/zulucoda/react-tunes-player-test)
-
-## React
-
-### Import `ReactTunesPlayerContainer` into your view
-
 ````javascript
-import { ReactTunesPlayerContainer } from "react-tunes-player";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactTunesPlayer from 'react-tunes-player';
+
+const data = [
+  {
+    tune:
+      'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg',
+    name: 'The lego tune',
+    album: 'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
+  },
+  {
+    tune:
+      'https://react-tunes-player.mfbproject.co.za/assets/audio/bensound-funkysuspense.mp3',
+    name: 'Funky Suspense',
+    album:
+      'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',
+  },
+];
+
+ReactDOM.render(
+  <ReactTunesPlayer tunes={data} />,
+  document.querySelector('.app'),
+);
 ````
 
-### Add `ReactTunesPlayerContainer` to your view.
+### Example folder on how to use `react-tunes-player`
+[example](example)
 
-````javascript
+### Tune Type
 
-<ReactTunesPlayerContainer
-    tunes={[
-      {
-        tune: "/assets/audio/the_lego_tune.ogg",
-        name: "The lego tune",
-        album: "/assets/images/dune.jpg"
-      },
-      {
-        tune: "/assets/audio/bensound-funkysuspense.mp3",
-        name: "Funky Suspense",
-        album: "/assets/images/funkysuspense.jpg"
-      }
-    ]}
-/>
-````
+| Name | Type | Description | Example |
+| :----| :----| :-----------| :-----------| 
+| tune  | string | This is the tune location | `tune: 'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg'` |
+| name  | string | This is the tune name | `name: 'The lego tune'` |
+| album  | string | This is the tune album art location | `album: 'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg'` |
 
-### `ReactTunesPlayerContainer` takes in tunes prop, tunes must set with the following info:
+Example:
 ```
-//Tune object
+// Tune Type
 {
- tune: [URL/LOCATION_FOR_TUNE],
- name: [NAME_OF_THE_TUNE],
- album: [URL/LOCATION_FOR_ALBUM_ART]
-}
-
-//example
-{
- tune: "/assets/audio/the_lego_tune.ogg",
- name: "The lego tune",
- album: "/assets/images/dune.jpg"
+     tune: "/assets/audio/the_lego_tune.ogg",
+     name: "The lego tune",
+     album: "/assets/images/dune.jpg"
 }
 ```
 
-## Redux
-### Import `reactTunesPlayerReducer` into your reducers files
-```javascript
-import { reactTunesPlayerReducer } from "react-tunes-player";
+### Available Props
+
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| tunes  | `Array<Tune>` | [Array of Tune Type](#tune-type) |
+
+Example:
 ```
-### Add to `combineReducers`
-```javascript
-export default combineReducers({
-  reactTunesPlayerReducer
-});
+// tunes
+[
+ {
+     tune: "/assets/audio/the_lego_tune.ogg",
+     name: "The lego tune",
+     album: "/assets/images/dune.jpg"
+ }
+]
 ```
 
-## Inspirations
-- [HTML5 Audio Player with Responsive Playlist by Mark Hillard](https://codepen.io/markhillard/pen/Hjcwu)
-- [A simple React wrapper on the HTML5 audio tag](https://github.com/justinmc/react-audio-player)
+## Responsive Design
+### 375 Mobile
+ ![react-tunes-player-mobile.png](react-tunes-player-mobile.png)
+  
+### 768 Tablet
+ ![react-tunes-player-tablet.png](react-tunes-player-tablet.png)
 
-## Development
-NOTE: This repo was created using `create-react-app`, and it was ejected to generate this npm package.
+### 1024 Laptop
+ ![react-tunes-player-laptop](react-tunes-player-laptop.png)
 
-Thanks to Pavel Lokhmakov - [Have a look at his blog post on how to create npm package using `create-react-app`](https://medium.com/@lokhmakov/best-way-to-create-npm-packages-with-create-react-app-b24dd449c354)
+*Greater than 1024 is the same laptop*
 
-[Best way to create npm packages with create-react-app](https://medium.com/@lokhmakov/best-way-to-create-npm-packages-with-create-react-app-b24dd449c354)
+
 
 ## Music Credits
 [Royalty Free Music from Bensound](http://www.bensound.com/)

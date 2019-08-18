@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+src/
+coverage/
+config/
+public/
+scripts/
+build/
+example/
+.idea
+react-tunes-player-example.gif
+react-tunes-player-mobile.png
+react-tunes-player-laptop.png
+react-tunes-player-tablet.png
