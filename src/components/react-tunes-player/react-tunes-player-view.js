@@ -418,13 +418,8 @@ class ReactTunesPlayerView extends Component {
   }
 }
 
-ReactTunesPlayerView.defaultProps = {
-  autoPlay: false
-};
-
 ReactTunesPlayerView.propTypes = {
   tunes: PropTypes.array.isRequired,
-  autoPlay: PropTypes.bool
 };
 
 export default ReactTunesPlayerView;
