@@ -37,7 +37,7 @@ import { setNextTune, setPreviousTune } from '../utils/util';
 import { Audio } from './audio';
 import { Progress } from './progress';
 
-export const Player = ({ tunes }) => {
+export const Player = ({ tunes = [] }) => {
   const [currentTune, setCurrentTune] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(HIGH_VOLUME);
@@ -47,7 +47,9 @@ export const Player = ({ tunes }) => {
   const [drag, setDrag] = useState(false);
 
   useEffect(() => {
-    setCurrentTune(tunes[0]);
+    if (tunes.length > 0) {
+      setCurrentTune(tunes[0]);
+    }
   }, [tunes]);
 
   const resetTimeAndDuration = () => {
@@ -60,9 +62,16 @@ export const Player = ({ tunes }) => {
     setPreviousTune(tunes, currentTune, setCurrentTune);
   };
 
-  if (!tunes && tunes.length) return <NoTunes />;
+  if (tunes.length === 0)
+    return (
+      <ReactTunePlayerContainer>
+        <TunesInner>
+          <NoTunes />
+        </TunesInner>
+      </ReactTunePlayerContainer>
+    );
 
-  if (!currentTune) return <NoTunes errorMsg="No current tune set :(" />;
+  if (!currentTune) return null;
 
   return (
     <ReactTunePlayerContainer>

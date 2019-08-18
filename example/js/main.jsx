@@ -22,3 +22,5 @@ ReactDOM.render(
   <ReactTunesPlayer tunes={data} />,
   document.querySelector('.app'),
 );
+
+// ReactDOM.render(<ReactTunesPlayer />, document.querySelector('.app'));
