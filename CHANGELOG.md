@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 upgrade to using hooks
 
+## [4.0.2] - 2019-08-20
+### Changed
+- fixed [coveralls](https://coveralls.io/github/zulucoda/react-tunes-player?branch=master) - [@zulucoda](https://github.com/zulucoda).
+- adding tests using @testing-library/react - [@zulucoda](https://github.com/zulucoda).
+
 ## [4.0.1] - 2019-08-18
 ### Changed
 - update README.md [@zulucoda](https://github.com/zulucoda).
