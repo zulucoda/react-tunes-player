@@ -43,6 +43,9 @@ describe('React Tunes Player - Unit Test', () => {
       fireEvent.click(getByTestId('next-tune'));
 
       expect(getByTestId('current-tune-name')).toContainHTML('Funky Suspense');
+      expect(getByTestId('current-tune-album-art')).toContainHTML(
+        'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',
+      );
     });
 
     test('render previous tune onPrevTune click', () => {
@@ -50,6 +53,55 @@ describe('React Tunes Player - Unit Test', () => {
       fireEvent.click(getByTestId('previous-tune'));
 
       expect(getByTestId('current-tune-name')).toContainHTML('Funky Suspense');
+      expect(getByTestId('current-tune-album-art')).toContainHTML(
+        'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',
+      );
+    });
+
+    test('render previous tune onPrevTune click 2x', () => {
+      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+
+      expect(getByTestId('current-tune-name')).toContainHTML('The lego tune');
+      expect(getByTestId('current-tune-album-art')).toContainHTML(
+        'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
+      );
+
+      fireEvent.click(getByTestId('previous-tune'));
+
+      expect(getByTestId('current-tune-name')).toContainHTML('Funky Suspense');
+      expect(getByTestId('current-tune-album-art')).toContainHTML(
+        'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',
+      );
+
+      fireEvent.click(getByTestId('previous-tune'));
+
+      expect(getByTestId('current-tune-name')).toContainHTML('The lego tune');
+      expect(getByTestId('current-tune-album-art')).toContainHTML(
+        'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
+      );
+    });
+
+    test('render previous tune onNextTune click 2x', () => {
+      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+
+      expect(getByTestId('current-tune-name')).toContainHTML('The lego tune');
+      expect(getByTestId('current-tune-album-art')).toContainHTML(
+        'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
+      );
+
+      fireEvent.click(getByTestId('next-tune'));
+
+      expect(getByTestId('current-tune-name')).toContainHTML('Funky Suspense');
+      expect(getByTestId('current-tune-album-art')).toContainHTML(
+        'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',
+      );
+
+      fireEvent.click(getByTestId('next-tune'));
+
+      expect(getByTestId('current-tune-name')).toContainHTML('The lego tune');
+      expect(getByTestId('current-tune-album-art')).toContainHTML(
+        'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
+      );
     });
   });
 

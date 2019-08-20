@@ -46,6 +46,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders player with
         >
           <img
             alt="The lego tune"
+            data-testid="current-tune-album-art"
             src="https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg"
           />
         </div>

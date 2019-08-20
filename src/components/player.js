@@ -79,7 +79,11 @@ export const Player = ({ tunes = [] }) => {
         <TunesWrapper>
           <MainWrapper>
             <CurrentAlbumPlaying>
-              <img alt={currentTune.name} src={currentTune.album} />
+              <img
+                data-testid="current-tune-album-art"
+                alt={currentTune.name}
+                src={currentTune.album}
+              />
             </CurrentAlbumPlaying>
             <NowPlaying>
               <span data-testid="current-tune-name">{currentTune.name}</span>
