@@ -105,6 +105,7 @@ export const Player = ({ tunes = [] }) => {
                 isPlaying={isPlaying}
                 title="Play tune"
                 onClick={() => setIsPlaying(true)}
+                data-testid="play-tune"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M96 52v408l320-204L96 52z" />
@@ -114,6 +115,7 @@ export const Player = ({ tunes = [] }) => {
                 isPlaying={isPlaying}
                 title="Pause tune"
                 onClick={() => setIsPlaying(false)}
+                data-testid="pause-tune"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z" />

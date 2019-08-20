@@ -28,6 +28,74 @@ exports[`React Tunes Player - Unit Test when there are NO tunes render Warning! 
 </div>
 `;
 
+exports[`React Tunes Player - Unit Test when there are tunes renders pause button button with red colour on onPause click 1`] = `
+<a
+  class="sc-gzVnrw sc-gZMcBi dOloVb"
+  data-testid="pause-tune"
+  title="Pause tune"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders pause button button with red colour on onPause click 2`] = `
+<a
+  class="sc-gzVnrw sc-iwsKbI ivFnXo"
+  data-testid="play-tune"
+  title="Play tune"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M96 52v408l320-204L96 52z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders play button button with red colour on onPlay click 1`] = `
+<a
+  class="sc-gzVnrw sc-iwsKbI ilTWGC"
+  data-testid="play-tune"
+  title="Play tune"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M96 52v408l320-204L96 52z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders play button button with red colour on onPlay click 2`] = `
+<a
+  class="sc-gzVnrw sc-gZMcBi gieWAT"
+  data-testid="pause-tune"
+  title="Pause tune"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z"
+    />
+  </svg>
+</a>
+`;
+
 exports[`React Tunes Player - Unit Test when there are tunes renders player with 1st tune loaded 1`] = `
 <div
   class="sc-bdVaJa AYjSo"
@@ -78,6 +146,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders player with
           </a>
           <a
             class="sc-gzVnrw sc-iwsKbI ivFnXo"
+            data-testid="play-tune"
             title="Play tune"
           >
             <svg
@@ -91,6 +160,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders player with
           </a>
           <a
             class="sc-gzVnrw sc-gZMcBi dOloVb"
+            data-testid="pause-tune"
             title="Pause tune"
           >
             <svg

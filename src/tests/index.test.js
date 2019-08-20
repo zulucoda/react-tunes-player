@@ -103,6 +103,20 @@ describe('React Tunes Player - Unit Test', () => {
         'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
       );
     });
+
+    test('renders play button button with red colour on onPlay click', () => {
+      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      fireEvent.click(getByTestId('play-tune'));
+      expect(getByTestId('play-tune')).toMatchSnapshot();
+      expect(getByTestId('pause-tune')).toMatchSnapshot();
+    });
+
+    test('renders pause button button with red colour on onPause click', () => {
+      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      fireEvent.click(getByTestId('pause-tune'));
+      expect(getByTestId('pause-tune')).toMatchSnapshot();
+      expect(getByTestId('play-tune')).toMatchSnapshot();
+    });
   });
 
   describe('when there are NO tunes', () => {
