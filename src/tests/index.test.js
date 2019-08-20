@@ -31,6 +31,9 @@ describe('React Tunes Player - Unit Test', () => {
             'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',
         },
       ];
+      window.HTMLMediaElement.prototype.load = jest.fn();
+      window.HTMLMediaElement.prototype.play = jest.fn();
+      window.HTMLMediaElement.prototype.pause = jest.fn();
     });
 
     test('renders player with 1st tune loaded', () => {
@@ -116,6 +119,30 @@ describe('React Tunes Player - Unit Test', () => {
       fireEvent.click(getByTestId('pause-tune'));
       expect(getByTestId('pause-tune')).toMatchSnapshot();
       expect(getByTestId('play-tune')).toMatchSnapshot();
+    });
+
+    test('renders HighVolume with red colour on HighVolume button click', () => {
+      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      fireEvent.click(getByTestId('high-volume'));
+      expect(getByTestId('high-volume')).toMatchSnapshot();
+    });
+
+    test('renders MediumVolume with red colour on MediumVolume button click', () => {
+      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      fireEvent.click(getByTestId('medium-volume'));
+      expect(getByTestId('medium-volume')).toMatchSnapshot();
+    });
+
+    test('renders LowVolume with red colour on LowVolume button click', () => {
+      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      fireEvent.click(getByTestId('low-volume'));
+      expect(getByTestId('low-volume')).toMatchSnapshot();
+    });
+
+    test('renders MuteVolume with red colour on MuteVolume button click', () => {
+      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      fireEvent.click(getByTestId('mute-volume'));
+      expect(getByTestId('mute-volume')).toMatchSnapshot();
     });
   });
 
