@@ -79,10 +79,14 @@ export const Player = ({ tunes = [] }) => {
         <TunesWrapper>
           <MainWrapper>
             <CurrentAlbumPlaying>
-              <img alt={currentTune.name} src={currentTune.album} />
+              <img
+                data-testid="current-tune-album-art"
+                alt={currentTune.name}
+                src={currentTune.album}
+              />
             </CurrentAlbumPlaying>
             <NowPlaying>
-              <span>{currentTune.name}</span>
+              <span data-testid="current-tune-name">{currentTune.name}</span>
             </NowPlaying>
             <Controls>
               <PreviousTune
@@ -91,6 +95,7 @@ export const Player = ({ tunes = [] }) => {
                   resetTimeAndDuration();
                   setPreviousTune(tunes, currentTune, setCurrentTune);
                 }}
+                data-testid="previous-tune"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M170.7 256L448 448V64L170.7 256zM64 64h64v384H64z" />
@@ -100,6 +105,7 @@ export const Player = ({ tunes = [] }) => {
                 isPlaying={isPlaying}
                 title="Play tune"
                 onClick={() => setIsPlaying(true)}
+                data-testid="play-tune"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M96 52v408l320-204L96 52z" />
@@ -109,6 +115,7 @@ export const Player = ({ tunes = [] }) => {
                 isPlaying={isPlaying}
                 title="Pause tune"
                 onClick={() => setIsPlaying(false)}
+                data-testid="pause-tune"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z" />
@@ -120,6 +127,7 @@ export const Player = ({ tunes = [] }) => {
                   resetTimeAndDuration();
                   setNextTune(tunes, currentTune, setCurrentTune);
                 }}
+                data-testid="next-tune"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M64 64v384l277.3-192L64 64zM384 64h64v384h-64z" />
@@ -145,6 +153,7 @@ export const Player = ({ tunes = [] }) => {
               <HighVolume
                 volume={volume}
                 onClick={() => setVolume(HIGH_VOLUME)}
+                data-testid="high-volume"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64zm288 64c0-38.399-21.333-72.407-53.333-88.863v176.636C330.667 328.408 352 294.4 352 256zM298.667 64v44.978C360.531 127.632 405.334 186.882 405.334 256c0 69.119-44.803 128.369-106.667 147.022V448C384 428.254 448 349.257 448 256c0-93.256-64-172.254-149.333-192z" />
@@ -153,12 +162,17 @@ export const Player = ({ tunes = [] }) => {
               <MediumVolume
                 volume={volume}
                 onClick={() => setVolume(MEDIUM_VOLUME)}
+                data-testid="medium-volume"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64zm288 64c0-38.399-21.333-72.407-53.333-88.863v176.636C330.667 328.408 352 294.4 352 256z" />
                 </svg>
               </MediumVolume>
-              <LowVolume volume={volume} onClick={() => setVolume(LOW_VOLUME)}>
+              <LowVolume
+                volume={volume}
+                onClick={() => setVolume(LOW_VOLUME)}
+                data-testid="low-volume"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64z" />
                 </svg>
@@ -166,6 +180,7 @@ export const Player = ({ tunes = [] }) => {
               <MuteVolume
                 volume={volume}
                 onClick={() => setVolume(MUTE_VOLUME)}
+                data-testid="mute-volume"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path d="M405.5 256c0 22.717-4.883 44.362-13.603 63.855l31.88 31.88C439.283 323.33 448 290.653 448 256c0-93.256-64-172.254-149-192v44.978C361 127.632 405.5 186.882 405.5 256zM256 80.458l-51.021 52.48L256 183.957zM420.842 396.885L91.116 67.157l-24 24 90.499 90.413-8.28 10.43H64v128h85.334L256 431.543V280l94.915 94.686C335.795 387.443 318 397.213 299 403.022V448c31-7.172 58.996-22.163 82.315-42.809l39.61 39.693 24-24.043-24.002-24.039-.081.083z" />

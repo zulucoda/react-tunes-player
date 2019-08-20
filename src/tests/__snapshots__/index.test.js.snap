@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React Tunes Player - Unit Test when there are NO tunes render Warning! No tunes loaded in player. 1`] = `
+<div
+  class="sc-bdVaJa AYjSo"
+>
+  <div
+    class="sc-bwzfXH hBWfsq"
+  >
+    <div
+      class="sc-kgoBCf iyhBDq"
+    >
+      <svg
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M32 464h448L256 48 32 464zm248-64h-48v-48h48v48zm0-80h-48v-96h48v96z"
+        />
+      </svg>
+      <span
+        class="sc-kGXeez jXtvCr"
+      >
+        Warning! No tunes loaded in player.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders HighVolume with red colour on HighVolume button click 1`] = `
+<a
+  class="sc-gzVnrw sc-fjdhpX goEfov"
+  data-testid="high-volume"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64zm288 64c0-38.399-21.333-72.407-53.333-88.863v176.636C330.667 328.408 352 294.4 352 256zM298.667 64v44.978C360.531 127.632 405.334 186.882 405.334 256c0 69.119-44.803 128.369-106.667 147.022V448C384 428.254 448 349.257 448 256c0-93.256-64-172.254-149.333-192z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders LowVolume with red colour on LowVolume button click 1`] = `
+<a
+  class="sc-gzVnrw sc-cSHVUG iZbvdO"
+  data-testid="low-volume"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders MediumVolume with red colour on MediumVolume button click 1`] = `
+<a
+  class="sc-gzVnrw sc-jzJRlG cHMYHx"
+  data-testid="medium-volume"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64zm288 64c0-38.399-21.333-72.407-53.333-88.863v176.636C330.667 328.408 352 294.4 352 256z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders MuteVolume with red colour on MuteVolume button click 1`] = `
+<a
+  class="sc-gzVnrw sc-kAzzGY irFLfo"
+  data-testid="mute-volume"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M405.5 256c0 22.717-4.883 44.362-13.603 63.855l31.88 31.88C439.283 323.33 448 290.653 448 256c0-93.256-64-172.254-149-192v44.978C361 127.632 405.5 186.882 405.5 256zM256 80.458l-51.021 52.48L256 183.957zM420.842 396.885L91.116 67.157l-24 24 90.499 90.413-8.28 10.43H64v128h85.334L256 431.543V280l94.915 94.686C335.795 387.443 318 397.213 299 403.022V448c31-7.172 58.996-22.163 82.315-42.809l39.61 39.693 24-24.043-24.002-24.039-.081.083z"
+    />
+    <path
+      d="M352.188 256c0-38.399-21.188-72.407-53.188-88.863v59.82l50.801 50.801A100.596 100.596 0 0 0 352.188 256z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders pause button button with red colour on onPause click 1`] = `
+<a
+  class="sc-gzVnrw sc-gZMcBi dOloVb"
+  data-testid="pause-tune"
+  title="Pause tune"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders pause button button with red colour on onPause click 2`] = `
+<a
+  class="sc-gzVnrw sc-iwsKbI ivFnXo"
+  data-testid="play-tune"
+  title="Play tune"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M96 52v408l320-204L96 52z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders play button button with red colour on onPlay click 1`] = `
+<a
+  class="sc-gzVnrw sc-iwsKbI ilTWGC"
+  data-testid="play-tune"
+  title="Play tune"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M96 52v408l320-204L96 52z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders play button button with red colour on onPlay click 2`] = `
+<a
+  class="sc-gzVnrw sc-gZMcBi gieWAT"
+  data-testid="pause-tune"
+  title="Pause tune"
+>
+  <svg
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`React Tunes Player - Unit Test when there are tunes renders player with 1st tune loaded 1`] = `
+<div
+  class="sc-bdVaJa AYjSo"
+>
+  <div
+    class="sc-bwzfXH hBWfsq"
+  >
+    <div
+      class="sc-htpNat bVSQtJ"
+    >
+      <div
+        class="sc-bxivhb drSQph"
+      >
+        <div
+          class="sc-ifAKCX jIIEGe"
+        >
+          <img
+            alt="The lego tune"
+            data-testid="current-tune-album-art"
+            src="https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg"
+          />
+        </div>
+        <div
+          class="sc-EHOje fYevLp"
+        >
+          <span
+            data-testid="current-tune-name"
+          >
+            The lego tune
+          </span>
+        </div>
+        <div
+          class="sc-bZQynM eBeMeA"
+        >
+          <a
+            class="sc-gzVnrw sc-htoDjs gXgYpX"
+            data-testid="previous-tune"
+            title="Previous tune"
+          >
+            <svg
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M170.7 256L448 448V64L170.7 256zM64 64h64v384H64z"
+              />
+            </svg>
+          </a>
+          <a
+            class="sc-gzVnrw sc-iwsKbI ivFnXo"
+            data-testid="play-tune"
+            title="Play tune"
+          >
+            <svg
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M96 52v408l320-204L96 52z"
+              />
+            </svg>
+          </a>
+          <a
+            class="sc-gzVnrw sc-gZMcBi dOloVb"
+            data-testid="pause-tune"
+            title="Pause tune"
+          >
+            <svg
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M96 448h106.7V64H96v384zM309.3 64v384H416V64H309.3z"
+              />
+            </svg>
+          </a>
+          <a
+            class="sc-gzVnrw sc-dnqmqq qajlB"
+            data-testid="next-tune"
+            title="Next tune"
+          >
+            <svg
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M64 64v384l277.3-192L64 64zM384 64h64v384h-64z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          class="sc-gqjmRU dvpIXl"
+        >
+          <progress
+            max="0"
+            value="0"
+          />
+        </div>
+        <div
+          class="sc-VigVT iNFxKe"
+        >
+          0 / 0
+        </div>
+        <div
+          class="sc-bZQynM sc-jTzLTM iYZprY"
+        >
+          <a
+            class="sc-gzVnrw sc-fjdhpX goEfov"
+            data-testid="high-volume"
+          >
+            <svg
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64zm288 64c0-38.399-21.333-72.407-53.333-88.863v176.636C330.667 328.408 352 294.4 352 256zM298.667 64v44.978C360.531 127.632 405.334 186.882 405.334 256c0 69.119-44.803 128.369-106.667 147.022V448C384 428.254 448 349.257 448 256c0-93.256-64-172.254-149.333-192z"
+              />
+            </svg>
+          </a>
+          <a
+            class="sc-gzVnrw sc-jzJRlG oHIIe"
+            data-testid="medium-volume"
+          >
+            <svg
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64zm288 64c0-38.399-21.333-72.407-53.333-88.863v176.636C330.667 328.408 352 294.4 352 256z"
+              />
+            </svg>
+          </a>
+          <a
+            class="sc-gzVnrw sc-cSHVUG eKgnZi"
+            data-testid="low-volume"
+          >
+            <svg
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M64 192v128h85.334L256 431.543V80.458L149.334 192H64z"
+              />
+            </svg>
+          </a>
+          <a
+            class="sc-gzVnrw sc-kAzzGY gudurj"
+            data-testid="mute-volume"
+          >
+            <svg
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M405.5 256c0 22.717-4.883 44.362-13.603 63.855l31.88 31.88C439.283 323.33 448 290.653 448 256c0-93.256-64-172.254-149-192v44.978C361 127.632 405.5 186.882 405.5 256zM256 80.458l-51.021 52.48L256 183.957zM420.842 396.885L91.116 67.157l-24 24 90.499 90.413-8.28 10.43H64v128h85.334L256 431.543V280l94.915 94.686C335.795 387.443 318 397.213 299 403.022V448c31-7.172 58.996-22.163 82.315-42.809l39.61 39.693 24-24.043-24.002-24.039-.081.083z"
+              />
+              <path
+                d="M352.188 256c0-38.399-21.188-72.407-53.188-88.863v59.82l50.801 50.801A100.596 100.596 0 0 0 352.188 256z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          class="sc-chPdSV hajJrv"
+        >
+          <audio
+            controls=""
+            src="https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
