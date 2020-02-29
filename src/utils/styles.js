@@ -219,6 +219,7 @@ export const WarningWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 
   > svg {
     width: 3em;
@@ -228,6 +229,10 @@ export const WarningWrapper = styled.div`
 `;
 export const WarningText = styled.span`
   padding: 0.5em 0 0 0;
-  font-size: 2em;
+  font-size: 1em;
   vertical-align: center;
+  p {
+    padding: 0;
+    margin: 0;
+  }
 `;
