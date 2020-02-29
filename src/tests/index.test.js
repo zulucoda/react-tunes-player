@@ -148,7 +148,7 @@ describe('React Tunes Player - Unit Test', () => {
 
   describe('when there are NO tunes', () => {
     test('render Warning! No tunes loaded in player.', () => {
-      const { container } = render(<ReactTunesPlayer />);
+      const { container } = render(<ReactTunesPlayer tunes={[]} />);
       expect(container.firstChild).toMatchSnapshot();
     });
   });
