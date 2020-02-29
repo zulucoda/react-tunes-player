@@ -59,8 +59,9 @@ export const CurrentAlbumPlaying = styled.div`
 `;
 export const NowPlaying = styled.div`
   margin: 2em 0 0 0;
-  font-size: 0.7em;
-  flex-grow: 2;
+  font-size: 0.8em;
+  flex-grow: 1;
+  flex-basis: 9.3em;
 
   @media ${device.mobileL} {
     flex-grow: 1;
@@ -77,16 +78,17 @@ export const NowPlaying = styled.div`
   }
 `;
 export const Controls = styled.div`
-  margin: 1.7em 0 0 0;
+  margin: 1.5em 0 0 0;
+  flex-grow: 1;
 
-  @media ${device.laptop} {
-    //margin: 1.2em 0 0 0;
+  @media ${device.tablet} {
+    margin: 1.7em 0 0 0;
   }
 `;
 const Btn = styled.a`
   background-color: transparent;
   color: #231f20;
-  font-size: 0.7em;
+  font-size: 1em;
   padding: 1em 0.5em 0 0.5em;
 
   @media ${device.tablet} {
@@ -169,7 +171,7 @@ export const SeekTune = styled.div`
 `;
 export const SeekTime = styled.div`
   margin: 2em 1em 0 1em;
-  font-size: 0.7em;
+  font-size: 0.8em;
   flex-basis: 5.5em;
   text-align: center;
 
