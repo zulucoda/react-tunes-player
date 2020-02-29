@@ -68,6 +68,11 @@ export const NowPlaying = styled.div`
 
   @media ${device.tablet} {
     font-size: 1em;
+    margin: 1.7em 1em 0 0;
+  }
+
+  @media ${device.laptop} {
+    font-size: 1em;
     margin: 2em 1em 0 0;
   }
 `;
@@ -85,8 +90,8 @@ const Btn = styled.a`
   padding: 1em 0.5em 0 0.5em;
 
   @media ${device.tablet} {
-    font-size: 1.3em;
-    padding: 0 1em 0 1em;
+    font-size: 1em;
+    padding: 0 0.7em 0 0.7em;
   }
 
   @media ${device.laptop} {
@@ -105,10 +110,10 @@ const Btn = styled.a`
       height: 0.8em;
     }
 
-    // @media ${device.laptop} {
-    //   width: 0.8em;
-    //   height: 0.8em;
-    // }
+    @media ${device.laptop} {
+      width: 0.8em;
+      height: 0.8em;
+    }
 
     &:hover {
       fill: #e93733;
@@ -130,6 +135,12 @@ export const PauseTune = styled(Btn)`
 export const SeekTune = styled.div`
   display: none;
   @media ${device.tablet} {
+    display: inline;
+    margin: 1.7em 0 0 0;
+    flex-grow: 2;
+  }
+
+  @media ${device.laptop} {
     display: inline;
     margin: 2em 0 0 0;
     flex-grow: 2;
@@ -159,9 +170,17 @@ export const SeekTune = styled.div`
 export const SeekTime = styled.div`
   margin: 2em 1em 0 1em;
   font-size: 0.7em;
+  flex-basis: 5.5em;
+  text-align: center;
 
   @media ${device.tablet} {
     font-size: 1em;
+    margin: 1.7em 1em 0 1em;
+  }
+
+  @media ${device.laptop} {
+    font-size: 1em;
+    margin: 2em 1em 0 1em;
   }
 `;
 export const Volume = styled(Controls)`
