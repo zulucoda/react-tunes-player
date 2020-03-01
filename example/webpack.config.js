@@ -19,7 +19,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/js/',
-    filename: `bundle.${new Date().getTime()}.js`,
+    filename: `bundle.js`,
   },
   devServer: {
     port: PORT,

@@ -36,6 +36,8 @@ import { NoTunes } from './no-tunes';
 import { setNextTune, setPreviousTune } from '../utils/util';
 import { Audio } from './audio';
 import { Progress } from './progress';
+import Spinner from './spinner';
+import TuneError from './tune-error';
 
 export const Player = ({ tunes = [] }) => {
   const [currentTune, setCurrentTune] = useState(null);
@@ -45,6 +47,8 @@ export const Player = ({ tunes = [] }) => {
   const [tuneDuration, setTuneDuration] = useState(0);
   const [triggerCurrentTime, setTriggerCurrentTime] = useState(false);
   const [drag, setDrag] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [onError, setOnError] = useState(false);
 
   useEffect(() => {
     if (tunes.length > 0) {
@@ -58,6 +62,7 @@ export const Player = ({ tunes = [] }) => {
   };
 
   const onEnded = () => {
+    setIsLoading(true);
     resetTimeAndDuration();
     setPreviousTune(tunes, currentTune, setCurrentTune);
   };
@@ -73,8 +78,18 @@ export const Player = ({ tunes = [] }) => {
 
   if (!currentTune) return null;
 
+  if (onError)
+    return (
+      <ReactTunePlayerContainer>
+        <TunesInner>
+          <TuneError currentTune={currentTune} />
+        </TunesInner>
+      </ReactTunePlayerContainer>
+    );
+
   return (
     <ReactTunePlayerContainer>
+      <Spinner showSpinner={isLoading} />
       <TunesInner>
         <TunesWrapper>
           <MainWrapper>
@@ -92,6 +107,7 @@ export const Player = ({ tunes = [] }) => {
               <PreviousTune
                 title="Previous tune"
                 onClick={() => {
+                  setIsLoading(true);
                   resetTimeAndDuration();
                   setPreviousTune(tunes, currentTune, setCurrentTune);
                 }}
@@ -124,6 +140,7 @@ export const Player = ({ tunes = [] }) => {
               <NextTune
                 title="Next tune"
                 onClick={() => {
+                  setIsLoading(true);
                   resetTimeAndDuration();
                   setNextTune(tunes, currentTune, setCurrentTune);
                 }}
@@ -199,6 +216,8 @@ export const Player = ({ tunes = [] }) => {
                 seekTimeTune={seekTimeTune}
                 triggerCurrentTime={triggerCurrentTime}
                 setTriggerCurrentTime={setTriggerCurrentTime}
+                setIsLoading={setIsLoading}
+                setOnError={setOnError}
               />
             </AudioWrapper>
           </MainWrapper>

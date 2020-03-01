@@ -15,6 +15,8 @@ export const Audio = ({
   seekTimeTune,
   triggerCurrentTime,
   setTriggerCurrentTime,
+  setIsLoading,
+  setOnError,
 }) => {
   const currentTuneAudio = useRef();
 
@@ -23,8 +25,21 @@ export const Audio = ({
     setSeekTimeTune(e.target.currentTime);
   };
 
+  const onTuneLoaded = () => {
+    setIsLoading(false);
+  };
+
+  const onTuneStalled = () => {
+    setIsLoading(false);
+    setOnError(true);
+  };
+
+  const onTuneError = () => {
+    setIsLoading(false);
+    setOnError(true);
+  };
+
   useEffect(() => {
-    currentTuneAudio.current.addEventListener('ended', onEnded);
     currentTuneAudio.current.addEventListener('timeupdate', tuneSeekTimeUpdate);
 
     if (isPlaying) {
@@ -39,7 +54,6 @@ export const Audio = ({
     setTriggerCurrentTime(false);
 
     return () => {
-      currentTuneAudio.current.removeEventListener('ended', onEnded);
       currentTuneAudio.current.removeEventListener(
         'timeupdate',
         tuneSeekTimeUpdate,
@@ -47,5 +61,19 @@ export const Audio = ({
     };
   }, [currentTune, isPlaying, volume, triggerCurrentTime]);
 
-  return <audio controls ref={currentTuneAudio} src={currentTune.tune}></audio>;
+  useEffect(() => {
+    currentTuneAudio.current.addEventListener('ended', onEnded);
+    currentTuneAudio.current.addEventListener('loadeddata', onTuneLoaded);
+    currentTuneAudio.current.addEventListener('stalled', onTuneStalled);
+    currentTuneAudio.current.addEventListener('error', onTuneError);
+
+    return () => {
+      currentTuneAudio.current.removeEventListener('ended', onEnded);
+      currentTuneAudio.current.removeEventListener('loadeddata', onTuneLoaded);
+      currentTuneAudio.current.removeEventListener('stalled', onTuneStalled);
+      currentTuneAudio.current.removeEventListener('error', onTuneError);
+    };
+  }, [currentTune]);
+
+  return <audio controls ref={currentTuneAudio} src={currentTune.tune} />;
 };

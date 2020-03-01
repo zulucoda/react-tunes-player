@@ -8,6 +8,8 @@ import {
 } from './constants';
 
 export const ReactTunePlayerContainer = styled.div`
+  font-family: sans-serif;
+  font-size: 1em;
   position: fixed;
   bottom: -5px;
   visibility: hidden;
@@ -45,7 +47,7 @@ export const MainWrapper = styled.div`
   width: 100%;
 `;
 export const CurrentAlbumPlaying = styled.div`
-  margin: 0 1rem 0 0;
+  margin: 0 1em 0 0;
   img {
     display: none;
 
@@ -56,56 +58,63 @@ export const CurrentAlbumPlaying = styled.div`
   }
 `;
 export const NowPlaying = styled.div`
-  margin: 2rem 0 0 0;
-  font-size: 0.7rem;
-  flex-grow: 2;
+  margin: 2em 0 0 0;
+  font-size: 0.8em;
+  flex-grow: 1;
+  flex-basis: 9.3em;
 
   @media ${device.mobileL} {
     flex-grow: 1;
   }
 
   @media ${device.tablet} {
-    font-size: 1rem;
-    margin: 2rem 1rem 0 0;
+    font-size: 1em;
+    margin: 1.7em 1em 0 0;
+  }
+
+  @media ${device.laptop} {
+    font-size: 1em;
+    margin: 2em 1em 0 0;
   }
 `;
 export const Controls = styled.div`
-  margin: 1.8rem 0 0 0;
+  margin: 1.5em 0 0 0;
+  flex-grow: 1;
 
-  @media ${device.laptop} {
-    margin: 1.2rem 0 0 0;
+  @media ${device.tablet} {
+    margin: 1.7em 0 0 0;
   }
 `;
 const Btn = styled.a`
   background-color: transparent;
   color: #231f20;
-  font-size: 0.7rem;
-  padding: 1rem 0.5rem 0 0.5rem;
+  font-size: 1em;
+  padding: 1em 0.5em 0 0.5em;
 
   @media ${device.tablet} {
-    font-size: 1.3em;
-    padding: 0 1rem 0 1rem;
+    font-size: 1em;
+    padding: 0 0.7em 0 0.7em;
   }
 
   @media ${device.laptop} {
-    font-size: 2em;
-    padding: 0 1rem 0 1rem;
+    font-size: 1.5em;
+    padding: 0 1em 0 1em;
   }
 
   > svg {
     cursor: pointer;
     fill: #594c4f;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.7em;
+    height: 0.7em;
 
     @media ${device.tablet} {
-      width: 0.8rem;
-      height: 0.8rem;
+      width: 0.8em;
+      height: 0.8em;
     }
 
     @media ${device.laptop} {
-      width: 1rem;
-      height: 1rem;
+      width: 0.8em;
+      height: 0.8em;
     }
 
     &:hover {
@@ -129,7 +138,13 @@ export const SeekTune = styled.div`
   display: none;
   @media ${device.tablet} {
     display: inline;
-    margin: 2rem 0 0 0;
+    margin: 1.7em 0 0 0;
+    flex-grow: 2;
+  }
+
+  @media ${device.laptop} {
+    display: inline;
+    margin: 2em 0 0 0;
     flex-grow: 2;
   }
   > progress {
@@ -155,11 +170,19 @@ export const SeekTune = styled.div`
   }
 `;
 export const SeekTime = styled.div`
-  margin: 2rem 1rem 0 1rem;
-  font-size: 0.7rem;
+  margin: 2em 1em 0 1em;
+  font-size: 0.8em;
+  flex-basis: 5.5em;
+  text-align: center;
 
   @media ${device.tablet} {
-    font-size: 1rem;
+    font-size: 1em;
+    margin: 1.7em 1em 0 1em;
+  }
+
+  @media ${device.laptop} {
+    font-size: 1em;
+    margin: 2em 1em 0 1em;
   }
 `;
 export const Volume = styled(Controls)`
@@ -196,15 +219,20 @@ export const WarningWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 
   > svg {
-    width: 3rem;
-    height: 3rem;
+    width: 3em;
+    height: 3em;
     fill: #e93733;
   }
 `;
 export const WarningText = styled.span`
-  padding: 0.5rem 0 0 0;
-  font-size: 2rem;
+  padding: 0.5em 0 0 0;
+  font-size: 1em;
   vertical-align: center;
+  p {
+    padding: 0;
+    margin: 0;
+  }
 `;
