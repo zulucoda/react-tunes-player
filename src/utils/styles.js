@@ -227,6 +227,16 @@ export const WarningWrapper = styled.div`
     fill: #e93733;
   }
 `;
+export const LoadingWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-grow: 2;
+  > svg {
+    fill: #e93733;
+  }
+`;
 export const WarningText = styled.span`
   padding: 0.5em 0 0 0;
   font-size: 1em;

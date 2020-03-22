@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Spinner - Unit Test render Spinner when showSpinner is true 1`] = `
-<div
-  class="sc-bdVaJa fUXyBp"
-/>
-`;
-
-exports[`Spinner - Unit Test render null when showSpinner is false 1`] = `null`;

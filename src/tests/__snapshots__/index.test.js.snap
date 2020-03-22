@@ -19,7 +19,7 @@ exports[`React Tunes Player - Unit Test when there are NO tunes render Warning! 
         />
       </svg>
       <span
-        class="sc-kGXeez kUdqaH"
+        class="sc-kpOJdX bivJjV"
       >
         Warning! No tunes loaded in player.
       </span>
@@ -168,9 +168,6 @@ exports[`React Tunes Player - Unit Test when there are tunes renders player with
   class="sc-bdVaJa dpdKgb"
 >
   <div
-    class="sc-kpOJdX gotcms"
-  />
-  <div
     class="sc-bwzfXH hBWfsq"
   >
     <div
@@ -261,6 +258,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders player with
           class="sc-gqjmRU cqyWIw"
         >
           <progress
+            data-testid="current-tune-progress-bar"
             max="0"
             value="0"
           />
@@ -334,6 +332,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders player with
         >
           <audio
             controls=""
+            data-testid="current-tune-audio"
             src="https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg"
           />
         </div>

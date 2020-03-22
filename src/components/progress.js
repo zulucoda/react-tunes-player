@@ -45,6 +45,7 @@ export const Progress = ({
       ref={progressSeek}
       max={tuneDuration}
       value={seekTimeTune}
-    ></progress>
+      data-testid="current-tune-progress-bar"
+    />
   );
 };
