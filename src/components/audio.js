@@ -75,5 +75,12 @@ export const Audio = ({
     };
   }, [currentTune]);
 
-  return <audio controls ref={currentTuneAudio} src={currentTune.tune} />;
+  return (
+    <audio
+      controls
+      ref={currentTuneAudio}
+      src={currentTune.tune}
+      data-testid="current-tune-audio"
+    />
+  );
 };
