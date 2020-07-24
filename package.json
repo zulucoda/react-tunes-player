@@ -4,6 +4,7 @@
   "description": "A simple .ogg/.mp3 player.",
   "private": false,
   "main": "lib/react-tunes-player.min.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "clean:lib": "rm -rf lib",
     "lib": "babel src/ --out-dir lib --copy-files && rm -rf lib/react-tunes-player/components/tests && rm -rf lib/react-tunes-player/tests",
@@ -17,7 +18,7 @@
     "precommit": "lint-staged",
     "build": "rollup -c",
     "clean-build": "npm run clean:lib && npm run build",
-    "dev": "npm run clean-build && cd example && npm run start"
+    "dev-js": "npm run clean-build && cd example/javascript && npm run start"
   },
   "keywords": [
     "react",
@@ -74,6 +75,7 @@
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.4",
     "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^3.9.7",
     "webpack": "^4.34.0",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.1"
