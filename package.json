@@ -1,6 +1,6 @@
 {
   "name": "react-tunes-player",
-  "version": "4.0.2",
+  "version": "5.0.0",
   "description": "A simple .ogg/.mp3 player.",
   "private": false,
   "main": "lib/react-tunes-player.min.js",
