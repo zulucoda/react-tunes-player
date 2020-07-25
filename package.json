@@ -17,8 +17,10 @@
     "up-version:patch": "npm version patch --force --message \"[ci skip] up version for release\"",
     "precommit": "lint-staged",
     "build": "rollup -c",
-    "clean-build": "npm run clean:lib && npm run build",
-    "dev-js": "npm run clean-build && cd example/javascript && npm run start"
+    "clean-build": "npm run clean:lib && npm run build && npm run copy-declaration",
+    "copy-declaration": "cp src/index.d.ts lib/index.d.ts -f",
+    "dev-js": "npm run clean-build && cd example/javascript && npm run start",
+    "dev-ts": "npm run clean-build && cd example/typescript && npm run start"
   },
   "keywords": [
     "react",
@@ -75,7 +77,6 @@
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.4",
     "rollup-plugin-uglify": "^6.0.4",
-    "typescript": "^3.9.7",
     "webpack": "^4.34.0",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.1"
