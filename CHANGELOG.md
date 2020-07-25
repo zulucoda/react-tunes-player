@@ -5,11 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [5.0.0] - 2020-07-25
-- upgrade to using hooks
 - adding react-tunes-player type declaration (index.d.ts)
 
 ## [4.0.2] - 2019-08-20
 ### Changed
+- upgrade to using hooks
 - fixed [coveralls](https://coveralls.io/github/zulucoda/react-tunes-player?branch=master) - [@zulucoda](https://github.com/zulucoda).
 - adding tests using @testing-library/react - [@zulucoda](https://github.com/zulucoda).
 
