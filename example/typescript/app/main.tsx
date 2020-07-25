@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactTunesPlayer from '../../lib/react-tunes-player.min';
+import ReactTunesPlayer from 'react-tunes-player';
 
 const data = [
   {
@@ -19,9 +19,5 @@ const data = [
 ];
 
 
-ReactDOM.render(
-  <ReactTunesPlayer tunes={data} />,
-  document.querySelector('.app'),
-);
 
-// ReactDOM.render(<ReactTunesPlayer />, document.querySelector('.app'));
+ReactDOM.render(<ReactTunesPlayer tunes={data} />, document.querySelector('.app'));
