@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+## vnext
+- customize css properties:
+  1. add width
+  2. update height
+- update buttons to use [lucid-icons](https://github.com/lucide-icons/lucide)
+  1. play button
+  2. previous button
+  3. next button
+- update volume to use slider
+- themes
+  1. dark theme
+  2. light theme
+- layout - update to use grid
+
 ## [5.0.0] - 2020-07-25
 ### Changed
 - adding react-tunes-player type declaration (index.d.ts)
@@ -26,4 +41,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.0.0] - 2018-08-23
 ### Changed
-- relase version 3.0.0 [@zulucoda](https://github.com/zulucoda).
+- release version 3.0.0 [@zulucoda](https://github.com/zulucoda).
