@@ -13,4 +13,31 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    height: 90px;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: calc(100% - 1em);
+}
+
+.album-cover {
+    margin: 0.5em;
+    border: 1px solid white;
+    width: 100px;
+    height: calc(90px - 1em);
+}
+
+.album-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.album-header {
+    width: 100%;
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
 }
