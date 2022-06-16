@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.player {
+    background: #111111;
+    display: grid;
+    color: white;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
