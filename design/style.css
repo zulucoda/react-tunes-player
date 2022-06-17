@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     height: 90px;
+    grid-gap: 2em;
 }
 
 .album {
@@ -52,4 +53,39 @@ body {
 }
 .player-controls-list-skip-back, .player-controls-list-play-circle, .player-controls-list-pause-circle, .player-controls-list-skip-forward {
     list-style: none;
+}
+
+.seek-control {
+    display: grid;
+    grid-template-columns: 2em auto 2em;
+    justify-items: center;
+    align-items: center;
+}
+
+.seek-control-time-progress, .seek-control-time-total {
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.seek-control-progress {
+    width: calc(100% - 1em);
+    height: 0.5em;
+
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Get rid of default border in Firefox. */
+    border: none;
+    background-size: auto;
+}
+
+.seek-control-progress::-webkit-progress-value {
+    background: #fff;
+}
+
+.seek-control-progress::-moz-progress-bar {
+    background: #fff;
 }
