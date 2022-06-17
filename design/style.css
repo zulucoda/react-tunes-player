@@ -105,8 +105,8 @@ body {
 @media screen and (min-width: 768px) {
 
     .player {
-        grid-gap: 2em;
-        grid-template-columns: 2fr 1fr 3fr 1fr;
+        grid-gap: 0.5em;
+        grid-template-columns: 2fr 1fr 3fr;
     }
 
     .seek-control {
@@ -120,16 +120,27 @@ body {
     }
 
     .album {
+        display: grid;
         grid-template-columns: 1fr 2fr;
         height: calc(100% - 1em);
     }
 
-    .album-header-font {
-        font-size: 18px;
+    .album-cover {
+        display: block;
+        margin: 0.5em;
+        border: 1px solid white;
+        width: 100px;
+        height: calc(90px - 1em);
     }
 
-    .volume-controls {
-        display: inline;
+    .album-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .album-header-font {
+        font-size: 16px;
     }
 
     .volume-controls-list {
@@ -144,4 +155,12 @@ body {
 
 @media screen and (min-width: 1024px) {
 
+    .player {
+        grid-gap: 2em;
+        grid-template-columns: 2fr 1fr 3fr 1fr;
+    }
+
+    .volume-controls {
+        display: inline;
+    }
 }
