@@ -121,7 +121,7 @@ body {
 
     .album {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 114px 2fr;
         height: calc(100% - 1em);
     }
 
