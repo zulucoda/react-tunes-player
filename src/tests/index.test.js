@@ -7,7 +7,7 @@
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import React from 'react';
 import ReactTunesPlayer from '../index';
-import 'jest-dom/extend-expect';
+import '@testing-library/jest-dom/extend-expect';
 
 describe('React Tunes Player - Unit Test', () => {
   afterEach(cleanup);
