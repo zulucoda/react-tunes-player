@@ -4,9 +4,9 @@ body {
 }
 
 .player {
-    background: #111111;
+    background: #181818;
     display: grid;
-    color: white;
+    color: #eef2f7;
     grid-template-columns: 1fr 2fr 1fr;
     position: fixed;
     bottom: 0;
@@ -83,11 +83,11 @@ body {
 }
 
 .seek-control-progress::-webkit-progress-value {
-    background: #fff;
+    background: #eef2f7;
 }
 
 .seek-control-progress::-moz-progress-bar {
-    background: #fff;
+    background: #eef2f7;
 }
 
 .volume-controls {
@@ -128,7 +128,7 @@ body {
     .album-cover {
         display: block;
         margin: 0.5em;
-        border: 1px solid white;
+        border: 1px solid #eef2f7;
         width: 100px;
         height: calc(90px - 1em);
     }
