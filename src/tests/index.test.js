@@ -22,15 +22,13 @@ describe('React Tunes Player - Unit Test', () => {
     beforeEach(() => {
       tunes = [
         {
-          tune:
-            'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg',
+          tune: 'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg',
           name: 'The lego tune',
           album:
             'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
         },
         {
-          tune:
-            'https://react-tunes-player.mfbproject.co.za/assets/audio/bensound-funkysuspense.mp3',
+          tune: 'https://react-tunes-player.mfbproject.co.za/assets/audio/bensound-funkysuspense.mp3',
           name: 'Funky Suspense',
           album:
             'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',

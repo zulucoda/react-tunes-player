@@ -5,7 +5,7 @@
  */
 const findIndex = (tunes, currentTune) =>
   tunes && tunes.length
-    ? tunes.findIndex(t => t.name === currentTune.name)
+    ? tunes.findIndex((t) => t.name === currentTune.name)
     : -1;
 
 export const setPreviousTune = (tunes, currentTune, setCurrentTune) => {

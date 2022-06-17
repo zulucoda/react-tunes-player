@@ -20,7 +20,7 @@ export const Audio = ({
 }) => {
   const currentTuneAudio = useRef();
 
-  const tuneSeekTimeUpdate = e => {
+  const tuneSeekTimeUpdate = (e) => {
     setTuneDuration(Number.isNaN(e.target.duration) ? 0 : e.target.duration);
     setSeekTimeTune(e.target.currentTime);
   };

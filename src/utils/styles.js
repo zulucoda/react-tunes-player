@@ -126,12 +126,12 @@ export const PreviousTune = styled(Btn)``;
 export const NextTune = styled(Btn)``;
 export const PlayTune = styled(Btn)`
   > svg {
-    fill: ${props => (props.isPlaying ? '#E93733' : '#594C4F')};
+    fill: ${(props) => (props.isPlaying ? '#E93733' : '#594C4F')};
   }
 `;
 export const PauseTune = styled(Btn)`
   > svg {
-    fill: ${props => (!props.isPlaying ? '#E93733' : '#594C4F')};
+    fill: ${(props) => (!props.isPlaying ? '#E93733' : '#594C4F')};
   }
 `;
 export const SeekTune = styled.div`
@@ -193,22 +193,23 @@ export const Volume = styled(Controls)`
 `;
 export const HighVolume = styled(Btn)`
   > svg {
-    fill: ${props => (props.volume === HIGH_VOLUME ? '#E93733' : '#594C4F')};
+    fill: ${(props) => (props.volume === HIGH_VOLUME ? '#E93733' : '#594C4F')};
   }
 `;
 export const MediumVolume = styled(Btn)`
   > svg {
-    fill: ${props => (props.volume === MEDIUM_VOLUME ? '#E93733' : '#594C4F')};
+    fill: ${(props) =>
+      props.volume === MEDIUM_VOLUME ? '#E93733' : '#594C4F'};
   }
 `;
 export const LowVolume = styled(Btn)`
   > svg {
-    fill: ${props => (props.volume === LOW_VOLUME ? '#E93733' : '#594C4F')};
+    fill: ${(props) => (props.volume === LOW_VOLUME ? '#E93733' : '#594C4F')};
   }
 `;
 export const MuteVolume = styled(Btn)`
   > svg {
-    fill: ${props => (props.volume === MUTE_VOLUME ? '#E93733' : '#594C4F')};
+    fill: ${(props) => (props.volume === MUTE_VOLUME ? '#E93733' : '#594C4F')};
   }
 `;
 export const AudioWrapper = styled.div`

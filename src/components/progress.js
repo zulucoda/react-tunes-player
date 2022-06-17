@@ -15,7 +15,7 @@ export const Progress = ({
 }) => {
   const progressSeek = useRef(null);
 
-  const onTuneSeek = e => {
+  const onTuneSeek = (e) => {
     const x = e.pageX - e.target.offsetLeft;
     const clickedValue = (x * e.target.max) / e.target.offsetWidth;
 
@@ -25,7 +25,7 @@ export const Progress = ({
 
   const endTuneSeekDrag = () => setDrag(false);
   const starTuneSeekDrag = () => setDrag(true);
-  const tuneSeekDragging = e => (drag ? onTuneSeek(e) : 'clicked');
+  const tuneSeekDragging = (e) => (drag ? onTuneSeek(e) : 'clicked');
 
   useEffect(() => {
     progressSeek.current.addEventListener('click', onTuneSeek);
