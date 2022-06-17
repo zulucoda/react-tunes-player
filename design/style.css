@@ -7,7 +7,7 @@ body {
     background: #111111;
     display: grid;
     color: white;
-    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr 3fr 1fr;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -40,4 +40,16 @@ body {
     font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
     font-size: 18px;
     line-height: 1.5;
+}
+
+.player-controls-list {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.player-controls-list-skip-back, .player-controls-list-play-circle, .player-controls-list-pause-circle, .player-controls-list-skip-forward {
+    list-style: none;
 }
