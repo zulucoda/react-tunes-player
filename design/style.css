@@ -89,3 +89,16 @@ body {
 .seek-control-progress::-moz-progress-bar {
     background: #fff;
 }
+
+.volume-controls-list {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.volume-controls-list-x, .volume-controls-list-0, .volume-controls-list-1, .volume-controls-list-2 {
+    list-style: none;
+}
