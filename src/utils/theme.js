@@ -18,13 +18,13 @@ export const PlayerGrid = styled.div`
   grid-gap: 0.5em;
 
   // tablet
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
     grid-gap: 0.5em;
     grid-template-columns: 2fr 1fr 3fr;
   }
 
   // desktop
-  @media ${device.mobileM} {
+  @media ${device.laptop} {
     grid-gap: 2em;
     grid-template-columns: 2fr 1fr 3fr 1fr;
   }
