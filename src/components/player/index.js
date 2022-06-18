@@ -1,6 +1,6 @@
 import React from 'react';
-import { arrayOf, exact, string } from 'prop-types';
 import { NoTunes } from '../old-v5-player/no-tunes';
+import { TunesPropTypes } from '../../utils/constants';
 
 /**
  * Player v6
@@ -15,14 +15,6 @@ const Player = ({ tunes = [] }) => {
   return <div>nothing yet</div>;
 };
 
-Player.propTypes = {
-  tunes: arrayOf(
-    exact({
-      tune: string.isRequired,
-      name: string.isRequired,
-      album: string.isRequired,
-    }),
-  ).isRequired,
-};
+Player.propTypes = TunesPropTypes;
 
 export default Player;

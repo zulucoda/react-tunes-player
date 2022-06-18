@@ -10,6 +10,7 @@ import {
   LOW_VOLUME,
   MEDIUM_VOLUME,
   MUTE_VOLUME,
+  TunesPropTypes,
 } from '../../utils/constants';
 import {
   AudioWrapper,
@@ -258,12 +259,4 @@ export const Player = ({ tunes = [] }) => {
   );
 };
 
-Player.propTypes = {
-  tunes: arrayOf(
-    exact({
-      tune: string.isRequired,
-      name: string.isRequired,
-      album: string.isRequired,
-    }),
-  ).isRequired,
-};
+Player.propTypes = TunesPropTypes;
