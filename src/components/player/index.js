@@ -4,6 +4,7 @@ import { HIGH_VOLUME, TunesPropTypes } from '../../utils/constants';
 import { PlayerGrid } from '../../utils/theme';
 import { setPreviousTune } from '../../utils/util';
 import Album from '../album';
+import PlayerControls from '../player-controls';
 
 /**
  * Player v6
@@ -47,11 +48,13 @@ const Player = ({ tunes = [] }) => {
     );
   }
 
+  // display loading state
   if (!currentTune) return null;
 
   return (
     <PlayerGrid>
       <Album title={currentTune.name} cover={currentTune.album} />
+      <PlayerControls />
     </PlayerGrid>
   );
 };
