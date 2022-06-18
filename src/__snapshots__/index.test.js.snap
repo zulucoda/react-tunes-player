@@ -3,21 +3,25 @@
 exports[`React Tunes Player - Render Tests should render new player by default 1`] = `
 <div>
   <div
-    class="sc-kgoBCf fgVeGz"
+    class="sc-dxgOiQ gIqFcL"
   >
-    <svg
-      viewBox="0 0 512 512"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      class="sc-kgoBCf fgVeGz"
     >
-      <path
-        d="M32 464h448L256 48 32 464zm248-64h-48v-48h48v48zm0-80h-48v-96h48v96z"
-      />
-    </svg>
-    <span
-      class="sc-kpOJdX bivJjV"
-    >
-      Warning! No tunes loaded in player.
-    </span>
+      <svg
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M32 464h448L256 48 32 464zm248-64h-48v-48h48v48zm0-80h-48v-96h48v96z"
+        />
+      </svg>
+      <span
+        class="sc-kpOJdX bivJjV"
+      >
+        Warning! No tunes loaded in player.
+      </span>
+    </div>
   </div>
 </div>
 `;
