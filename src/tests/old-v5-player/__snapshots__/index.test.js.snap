@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`React Tunes Player - Unit Test when there are NO tunes render Warning! No tunes loaded in player. 1`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are NO tunes render Warning! No tunes loaded in player. 1`] = `
 <div
   class="sc-bdVaJa dpdKgb"
 >
@@ -28,7 +28,7 @@ exports[`React Tunes Player - Unit Test when there are NO tunes render Warning! 
 </div>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders HighVolume with red colour on HighVolume button click 1`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders HighVolume with red colour on HighVolume button click 1`] = `
 <a
   class="sc-gzVnrw sc-fjdhpX hbtsaR"
   data-testid="high-volume"
@@ -44,7 +44,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders HighVolume 
 </a>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders LowVolume with red colour on LowVolume button click 1`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders LowVolume with red colour on LowVolume button click 1`] = `
 <a
   class="sc-gzVnrw sc-cSHVUG kBEPsB"
   data-testid="low-volume"
@@ -60,7 +60,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders LowVolume w
 </a>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders MediumVolume with red colour on MediumVolume button click 1`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders MediumVolume with red colour on MediumVolume button click 1`] = `
 <a
   class="sc-gzVnrw sc-jzJRlG dNOvAo"
   data-testid="medium-volume"
@@ -76,7 +76,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders MediumVolum
 </a>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders MuteVolume with red colour on MuteVolume button click 1`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders MuteVolume with red colour on MuteVolume button click 1`] = `
 <a
   class="sc-gzVnrw sc-kAzzGY cnrymw"
   data-testid="mute-volume"
@@ -95,7 +95,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders MuteVolume 
 </a>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders pause button button with red colour on onPause click 1`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders pause button button with red colour on onPause click 1`] = `
 <a
   class="sc-gzVnrw sc-gZMcBi iKDLpS"
   data-testid="pause-tune"
@@ -112,7 +112,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders pause butto
 </a>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders pause button button with red colour on onPause click 2`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders pause button button with red colour on onPause click 2`] = `
 <a
   class="sc-gzVnrw sc-iwsKbI hbtiok"
   data-testid="play-tune"
@@ -129,7 +129,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders pause butto
 </a>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders play button button with red colour on onPlay click 1`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders play button button with red colour on onPlay click 1`] = `
 <a
   class="sc-gzVnrw sc-iwsKbI haXGMr"
   data-testid="play-tune"
@@ -146,7 +146,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders play button
 </a>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders play button button with red colour on onPlay click 2`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders play button button with red colour on onPlay click 2`] = `
 <a
   class="sc-gzVnrw sc-gZMcBi faIgwZ"
   data-testid="pause-tune"
@@ -163,7 +163,7 @@ exports[`React Tunes Player - Unit Test when there are tunes renders play button
 </a>
 `;
 
-exports[`React Tunes Player - Unit Test when there are tunes renders player with 1st tune loaded 1`] = `
+exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders player with 1st tune loaded 1`] = `
 <div
   class="sc-bdVaJa dpdKgb"
 >

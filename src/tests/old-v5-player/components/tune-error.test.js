@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import TuneError from '../../components/old-v5-player/tune-error';
+import TuneError from '../../../components/old-v5-player/tune-error';
 
 describe('Tune Error - Unit Test', () => {
   test('render Warning! Error while loading tune', () => {
