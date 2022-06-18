@@ -11,11 +11,13 @@ declare type Tune = {
 };
 declare type TunesProp = {
   tunes?: Tune[];
+  oldPlayer?: boolean;
 };
 export declare const ReactTunesPlayer: {
-  ({ tunes }: TunesProp): JSX.Element;
+  ({ tunes, oldPlayer }: TunesProp): JSX.Element;
   defaultProps: {
     tunes: never[];
+    oldPlayer?: boolean;
   };
   propTypes: {
     tunes: import("prop-types").Validator<(Required<import("prop-types").InferProps<{
@@ -23,6 +25,7 @@ export declare const ReactTunesPlayer: {
       name: import("prop-types").Validator<string>;
       album: import("prop-types").Validator<string>;
     }>> | null | undefined)[]>;
+    oldPlayer?: boolean;
   };
 };
 export default ReactTunesPlayer;
