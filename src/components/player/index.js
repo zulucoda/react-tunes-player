@@ -1,6 +1,7 @@
 import React from 'react';
 import { NoTunes } from '../old-v5-player/no-tunes';
 import { TunesPropTypes } from '../../utils/constants';
+import { PlayerGrid } from '../../utils/theme';
 
 /**
  * Player v6
@@ -10,9 +11,13 @@ import { TunesPropTypes } from '../../utils/constants';
  */
 const Player = ({ tunes = [] }) => {
   if (tunes.length === 0) {
-    return <NoTunes />;
+    return (
+      <PlayerGrid>
+        <NoTunes />
+      </PlayerGrid>
+    );
   }
-  return <div>nothing yet</div>;
+  return <PlayerGrid>player to come</PlayerGrid>;
 };
 
 Player.propTypes = TunesPropTypes;
