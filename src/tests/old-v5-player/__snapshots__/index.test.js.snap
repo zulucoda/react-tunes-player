@@ -2,13 +2,13 @@
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are NO tunes render Warning! No tunes loaded in player. 1`] = `
 <div
-  class="sc-bdVaJa dpdKgb"
+  class="sc-bczRLJ gDWqKd"
 >
   <div
-    class="sc-bwzfXH hBWfsq"
+    class="sc-gsnTZi ljuRqf"
   >
     <div
-      class="sc-kgoBCf fgVeGz"
+      class="sc-bjUoiL gvnUrq"
     >
       <svg
         viewBox="0 0 512 512"
@@ -19,7 +19,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are NO tun
         />
       </svg>
       <span
-        class="sc-kpOJdX bivJjV"
+        class="sc-dIouRR evIpjP"
       >
         Warning! No tunes loaded in player.
       </span>
@@ -30,7 +30,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are NO tun
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders HighVolume with red colour on HighVolume button click 1`] = `
 <a
-  class="sc-gzVnrw sc-fjdhpX hbtsaR"
+  class="sc-iBkjds sc-breuTD ibaKid jUpaqN"
   data-testid="high-volume"
 >
   <svg
@@ -46,7 +46,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders LowVolume with red colour on LowVolume button click 1`] = `
 <a
-  class="sc-gzVnrw sc-cSHVUG kBEPsB"
+  class="sc-iBkjds sc-hAZoDl ibaKid bsLPTV"
   data-testid="low-volume"
 >
   <svg
@@ -62,7 +62,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders MediumVolume with red colour on MediumVolume button click 1`] = `
 <a
-  class="sc-gzVnrw sc-jzJRlG dNOvAo"
+  class="sc-iBkjds sc-ksZaOG ibaKid cwtngu"
   data-testid="medium-volume"
 >
   <svg
@@ -78,7 +78,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders MuteVolume with red colour on MuteVolume button click 1`] = `
 <a
-  class="sc-gzVnrw sc-kAzzGY cnrymw"
+  class="sc-iBkjds sc-fnykZs ibaKid fLwrqu"
   data-testid="mute-volume"
 >
   <svg
@@ -97,7 +97,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders pause button button with red colour on onPause click 1`] = `
 <a
-  class="sc-gzVnrw sc-gZMcBi iKDLpS"
+  class="sc-iBkjds sc-kDDrLX ibaKid eLGMcs"
   data-testid="pause-tune"
   title="Pause tune"
 >
@@ -114,7 +114,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders pause button button with red colour on onPause click 2`] = `
 <a
-  class="sc-gzVnrw sc-iwsKbI hbtiok"
+  class="sc-iBkjds sc-jqUVSM ibaKid gVQllu"
   data-testid="play-tune"
   title="Play tune"
 >
@@ -131,7 +131,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders play button button with red colour on onPlay click 1`] = `
 <a
-  class="sc-gzVnrw sc-iwsKbI haXGMr"
+  class="sc-iBkjds sc-jqUVSM ibaKid cToDwj"
   data-testid="play-tune"
   title="Play tune"
 >
@@ -148,7 +148,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders play button button with red colour on onPlay click 2`] = `
 <a
-  class="sc-gzVnrw sc-gZMcBi faIgwZ"
+  class="sc-iBkjds sc-kDDrLX ibaKid dHksVF"
   data-testid="pause-tune"
   title="Pause tune"
 >
@@ -165,19 +165,19 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
 
 exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes renders player with 1st tune loaded 1`] = `
 <div
-  class="sc-bdVaJa dpdKgb"
+  class="sc-bczRLJ gDWqKd"
 >
   <div
-    class="sc-bwzfXH hBWfsq"
+    class="sc-gsnTZi ljuRqf"
   >
     <div
-      class="sc-htpNat bVSQtJ"
+      class="sc-dkzDqf kGbBLV"
     >
       <div
-        class="sc-bxivhb drSQph"
+        class="sc-hKMtZM bCcrBr"
       >
         <div
-          class="sc-ifAKCX bHqHjL"
+          class="sc-eCYdqJ erHJYh"
         >
           <img
             alt="The lego tune"
@@ -186,7 +186,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
           />
         </div>
         <div
-          class="sc-EHOje euUhSI"
+          class="sc-jSMfEi elOdjV"
         >
           <span
             data-testid="current-tune-name"
@@ -195,10 +195,10 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
           </span>
         </div>
         <div
-          class="sc-bZQynM dVcScn"
+          class="sc-gKXOVf fWgVsD"
         >
           <a
-            class="sc-gzVnrw sc-htoDjs kVgYwm"
+            class="sc-iBkjds sc-ftvSup ibaKid"
             data-testid="previous-tune"
             title="Previous tune"
           >
@@ -212,7 +212,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
             </svg>
           </a>
           <a
-            class="sc-gzVnrw sc-iwsKbI hbtiok"
+            class="sc-iBkjds sc-jqUVSM ibaKid gVQllu"
             data-testid="play-tune"
             title="Play tune"
           >
@@ -226,7 +226,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
             </svg>
           </a>
           <a
-            class="sc-gzVnrw sc-gZMcBi iKDLpS"
+            class="sc-iBkjds sc-kDDrLX ibaKid eLGMcs"
             data-testid="pause-tune"
             title="Pause tune"
           >
@@ -240,7 +240,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
             </svg>
           </a>
           <a
-            class="sc-gzVnrw sc-dnqmqq feaGVZ"
+            class="sc-iBkjds sc-papXJ ibaKid"
             data-testid="next-tune"
             title="Next tune"
           >
@@ -255,7 +255,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
           </a>
         </div>
         <div
-          class="sc-gqjmRU cqyWIw"
+          class="sc-iqcoie gngPSl"
         >
           <progress
             data-testid="current-tune-progress-bar"
@@ -264,15 +264,15 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
           />
         </div>
         <div
-          class="sc-VigVT jkUmLA"
+          class="sc-crXcEl gduYsl"
         >
           0 / 0
         </div>
         <div
-          class="sc-bZQynM sc-jTzLTM kevCFF"
+          class="sc-gKXOVf sc-evZas fWgVsD iHJfBr"
         >
           <a
-            class="sc-gzVnrw sc-fjdhpX hbtsaR"
+            class="sc-iBkjds sc-breuTD ibaKid jUpaqN"
             data-testid="high-volume"
           >
             <svg
@@ -285,7 +285,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
             </svg>
           </a>
           <a
-            class="sc-gzVnrw sc-jzJRlG iaXtfX"
+            class="sc-iBkjds sc-ksZaOG ibaKid fyqYGT"
             data-testid="medium-volume"
           >
             <svg
@@ -298,7 +298,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
             </svg>
           </a>
           <a
-            class="sc-gzVnrw sc-cSHVUG gJEEuQ"
+            class="sc-iBkjds sc-hAZoDl ibaKid SKRIA"
             data-testid="low-volume"
           >
             <svg
@@ -311,7 +311,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
             </svg>
           </a>
           <a
-            class="sc-gzVnrw sc-kAzzGY cyWcyc"
+            class="sc-iBkjds sc-fnykZs ibaKid bKUikT"
             data-testid="mute-volume"
           >
             <svg
@@ -328,7 +328,7 @@ exports[`React Tunes Player - Old Player Tests - Unit Test when there are tunes 
           </a>
         </div>
         <div
-          class="sc-chPdSV hajJrv"
+          class="sc-fEOsli exGRsc"
         >
           <audio
             controls=""
