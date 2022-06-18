@@ -3,5 +3,5 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-import { Player as ReactTunesPlayer } from './components/player';
+import { Player as ReactTunesPlayer } from './components/old-v5-player/player';
 export default ReactTunesPlayer;

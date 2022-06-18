@@ -10,7 +10,7 @@ import {
   LOW_VOLUME,
   MEDIUM_VOLUME,
   MUTE_VOLUME,
-} from '../utils/constants';
+} from '../../utils/constants';
 import {
   AudioWrapper,
   Controls,
@@ -31,9 +31,9 @@ import {
   TunesInner,
   TunesWrapper,
   Volume,
-} from '../utils/styles';
+} from '../../utils/styles';
 import { NoTunes } from './no-tunes';
-import { setNextTune, setPreviousTune } from '../utils/util';
+import { setNextTune, setPreviousTune } from '../../utils/util';
 import { Audio } from './audio';
 import { Progress } from './progress';
 import TuneError from './tune-error';

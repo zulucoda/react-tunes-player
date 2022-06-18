@@ -4,7 +4,7 @@
  * Copyright zulucoda - mfbproject
  */
 import React from 'react';
-import { WarningText, WarningWrapper } from '../utils/styles';
+import { WarningText, WarningWrapper } from '../../utils/styles';
 
 const TuneError = ({ currentTune }) => (
   <WarningWrapper>
