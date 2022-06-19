@@ -17,6 +17,8 @@ import { Audio } from '../old-v5-player/audio';
 import { AudioWrapper } from '../../utils/styles';
 import styled from 'styled-components';
 import device from '../../utils/devices';
+import { LoadingTune } from '../old-v5-player/loading-tune';
+import TuneError from '../old-v5-player/tune-error';
 
 export const PlayerGrid = styled.div`
   background: ${DARK_THEME_COLOR};
@@ -123,33 +125,55 @@ const Player = ({ tunes = [] }) => {
   }
 
   // display loading state
-  if (!currentTune) return null;
+  if (!currentTune) {
+    return (
+      <PlayerGrid>
+        <LoadingTune />
+      </PlayerGrid>
+    );
+  }
+
+  if (onError) {
+    return (
+      <PlayerGrid>
+        <TuneError currentTune={currentTune} />
+      </PlayerGrid>
+    );
+  }
 
   return (
     <PlayerGrid>
       <Album title={currentTune.name} cover={currentTune.album} />
-      <PlayerControls
-        pause={pauseHandler}
-        play={playHandler}
-        skipBack={skipBackHandler}
-        skipForward={skipForwardHandler}
-        isPlaying={isPlaying}
-      />
-      <SeekControl
-        seekTimeTune={seekTimeTune}
-        tuneDuration={tuneDuration}
-        setSeekTimeTune={setSeekTimeTune}
-        setTriggerCurrentTime={setTriggerCurrentTime}
-        drag={drag}
-        setDrag={setDrag}
-      />
-      <VolumeControls
-        volumeMute={volumeMuteHandler}
-        volumeMedium={volumeMediumHandler}
-        volumeHigh={volumeHighHandler}
-        volumeLow={volumeLowHandler}
-        volume={volume}
-      />
+
+      {isLoading ? (
+        <LoadingTune />
+      ) : (
+        <>
+          <PlayerControls
+            pause={pauseHandler}
+            play={playHandler}
+            skipBack={skipBackHandler}
+            skipForward={skipForwardHandler}
+            isPlaying={isPlaying}
+          />
+          <SeekControl
+            seekTimeTune={seekTimeTune}
+            tuneDuration={tuneDuration}
+            setSeekTimeTune={setSeekTimeTune}
+            setTriggerCurrentTime={setTriggerCurrentTime}
+            drag={drag}
+            setDrag={setDrag}
+          />
+          <VolumeControls
+            volumeMute={volumeMuteHandler}
+            volumeMedium={volumeMediumHandler}
+            volumeHigh={volumeHighHandler}
+            volumeLow={volumeLowHandler}
+            volume={volume}
+          />
+        </>
+      )}
+
       <AudioWrapper>
         <Audio
           currentTune={currentTune}
