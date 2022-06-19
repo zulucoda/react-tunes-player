@@ -133,6 +133,7 @@ const Player = ({ tunes = [] }) => {
         play={playHandler}
         skipBack={skipBackHandler}
         skipForward={skipForwardHandler}
+        isPlaying={isPlaying}
       />
       <SeekControl
         seekTimeTune={seekTimeTune}

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SkipBack, PlayCircle, PauseCircle, SkipForward } from 'lucide-react';
-import { func } from 'prop-types';
+import { bool, func } from 'prop-types';
+import { GRAY_COLOR } from '../../utils/theme';
 
 const PlayerControlsList = styled.ul`
   height: 100%;
@@ -15,9 +16,25 @@ const PlayerControlsList = styled.ul`
 const PlayerControlItem = styled.li`
   list-style: none;
   cursor: pointer;
+
+  :hover > svg {
+    fill: ${GRAY_COLOR};
+  }
 `;
 
-const PlayerControls = ({ play, pause, skipBack, skipForward }) => {
+const PlayControlItem = styled(PlayerControlItem)`
+  > svg {
+    fill: ${(props) => (props.isPlaying ? `${GRAY_COLOR}` : 'none')};
+  }
+`;
+
+const PauseControlItem = styled(PlayerControlItem)`
+  > svg {
+    fill: ${(props) => (props.isPaused ? `${GRAY_COLOR}` : 'none')};
+  }
+`;
+
+const PlayerControls = ({ play, pause, skipBack, skipForward, isPlaying }) => {
   const onSkipBackClick = (e) => {
     e.preventDefault();
     return skipBack();
@@ -47,18 +64,20 @@ const PlayerControls = ({ play, pause, skipBack, skipForward }) => {
         >
           <SkipBack className="skip-back" role="skip-back" />
         </PlayerControlItem>
-        <PlayerControlItem
+        <PlayControlItem
           className="player-controls-list-play-circle"
           onClick={onPlayClick}
+          isPlaying={isPlaying}
         >
           <PlayCircle className="play-circle" role="play-circle" />
-        </PlayerControlItem>
-        <PlayerControlItem
+        </PlayControlItem>
+        <PauseControlItem
           className="player-controls-list-pause-circle"
           onClick={onPauseClick}
+          isPaused={!isPlaying}
         >
           <PauseCircle className="pause-circle" role="pause-circle" />
-        </PlayerControlItem>
+        </PauseControlItem>
         <PlayerControlItem
           className="player-controls-list-skip-forward"
           onClick={onSkipForwardClick}
@@ -75,6 +94,7 @@ PlayerControls.propTypes = {
   play: func.isRequired,
   pause: func.isRequired,
   skipForward: func.isRequired,
+  isPlaying: bool.isRequired,
 };
 
 export default PlayerControls;

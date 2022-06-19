@@ -22,6 +22,7 @@ describe('Components - Player Controls - Render Test', () => {
         skipForward={skipForwardMock}
         pause={pauseMock}
         skipBack={skipBackMock}
+        isPlaying={false}
       />,
     );
     expect(screen.getByRole('skip-back')).toBeInTheDocument();
@@ -37,6 +38,7 @@ describe('Components - Player Controls - Render Test', () => {
         skipForward={skipForwardMock}
         pause={pauseMock}
         skipBack={skipBackMock}
+        isPlaying={false}
       />,
     );
 
