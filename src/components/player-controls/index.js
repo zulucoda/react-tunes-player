@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from '../../utils/devices';
 import { SkipBack, PlayCircle, PauseCircle, SkipForward } from 'lucide-react';
 import { func } from 'prop-types';
 
@@ -11,9 +10,6 @@ const PlayerControlsList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @media ${device.tablet} {
-  }
 `;
 
 const PlayerControlItem = styled.li`
