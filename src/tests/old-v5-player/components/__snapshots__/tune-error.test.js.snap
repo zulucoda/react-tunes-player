@@ -2,7 +2,7 @@
 
 exports[`Tune Error - Unit Test render Warning! Error while loading tune 1`] = `
 <div
-  class="sc-kgoBCf fgVeGz"
+  class="sc-bjUoiL gvnUrq"
 >
   <svg
     viewBox="0 0 512 512"
@@ -13,7 +13,7 @@ exports[`Tune Error - Unit Test render Warning! Error while loading tune 1`] = `
     />
   </svg>
   <span
-    class="sc-kpOJdX bivJjV"
+    class="sc-dIouRR evIpjP"
   >
     <p>
       Warning! Error while trying to load tune
