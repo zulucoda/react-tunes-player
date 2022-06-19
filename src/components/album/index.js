@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { string } from 'prop-types';
 import device from '../../utils/devices';
+import { LIGHT_COLOR } from '../../utils/theme';
 
 const AlbumGrid = styled.div`
   display: grid;
@@ -21,7 +22,7 @@ const AlbumCover = styled.div`
   @media ${device.tablet} {
     display: block;
     margin: 0.5em;
-    border: 1px solid #eef2f7;
+    border: 1px solid ${LIGHT_COLOR};
     width: 100px;
     height: calc(90px - 1em);
   }

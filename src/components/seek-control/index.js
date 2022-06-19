@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import device from '../../utils/devices';
 import { formatSeekTime } from '../../utils/util';
+import { GRAY_COLOR, WHITE_COLOR } from '../../utils/theme';
 
 const SeekControlGrid = styled.div`
   display: grid;
@@ -35,14 +36,14 @@ const SeekControlProgress = styled.progress`
   /* Get rid of default border in Firefox. */
   border: none;
   background-size: auto;
-  background: #7b818a;
+  background: ${GRAY_COLOR};
 
   ::-webkit-progress-value {
-    background: #ffffff;
+    background: ${WHITE_COLOR};
   }
 
   ::-moz-progress-bar {
-    background: #ffffff;
+    background: ${WHITE_COLOR};
   }
 
   @media ${device.tablet} {
