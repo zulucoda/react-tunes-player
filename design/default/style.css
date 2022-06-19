@@ -80,16 +80,16 @@ body {
     /* Get rid of default border in Firefox. */
     border: none;
     background-size: auto;
+    background: #7b818a;
 }
 
 .seek-control-progress::-webkit-progress-value {
-    background: #eef2f7;
+    background: #ffffff;
 }
 
 .seek-control-progress::-moz-progress-bar {
-    background: #eef2f7;
+    background: #ffffff;
 }
-
 .volume-controls {
     display: none;
 }
