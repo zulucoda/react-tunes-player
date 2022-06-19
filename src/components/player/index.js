@@ -5,6 +5,7 @@ import { PlayerGrid } from '../../utils/theme';
 import { setNextTune, setPreviousTune } from '../../utils/util';
 import Album from '../album';
 import PlayerControls from '../player-controls';
+import SeekControl from '../seek-control';
 
 /**
  * Player v6
@@ -79,6 +80,14 @@ const Player = ({ tunes = [] }) => {
         play={playHandler}
         skipBack={skipBackHandler}
         skipForward={skipForwardHandler}
+      />
+      <SeekControl
+        seekTimeTune={seekTimeTune}
+        tuneDuration={tuneDuration}
+        setSeekTimeTune={setSeekTimeTune}
+        setTriggerCurrentTime={setTriggerCurrentTime}
+        drag={drag}
+        setDrag={setDrag}
       />
     </PlayerGrid>
   );
