@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NoTunes } from '../old-v5-player/no-tunes';
 import { HIGH_VOLUME, TunesPropTypes } from '../../utils/constants';
 import { PlayerGrid } from '../../utils/theme';
-import { setPreviousTune } from '../../utils/util';
+import { setNextTune, setPreviousTune } from '../../utils/util';
 import Album from '../album';
 import PlayerControls from '../player-controls';
 
@@ -40,6 +40,26 @@ const Player = ({ tunes = [] }) => {
     setPreviousTune(tunes, currentTune, setCurrentTune);
   };
 
+  const skipBackHandler = () => {
+    setIsLoading(true);
+    resetTimeAndDuration();
+    setPreviousTune(tunes, currentTune, setCurrentTune);
+  };
+
+  const playHandler = () => {
+    setIsPlaying(true);
+  };
+
+  const pauseHandler = () => {
+    setIsPlaying(false);
+  };
+
+  const skipForwardHandler = () => {
+    setIsLoading(true);
+    resetTimeAndDuration();
+    setNextTune(tunes, currentTune, setCurrentTune);
+  };
+
   if (tunes.length === 0) {
     return (
       <PlayerGrid>
@@ -54,7 +74,12 @@ const Player = ({ tunes = [] }) => {
   return (
     <PlayerGrid>
       <Album title={currentTune.name} cover={currentTune.album} />
-      <PlayerControls />
+      <PlayerControls
+        pause={pauseHandler}
+        play={playHandler}
+        skipBack={skipBackHandler}
+        skipForward={skipForwardHandler}
+      />
     </PlayerGrid>
   );
 };
