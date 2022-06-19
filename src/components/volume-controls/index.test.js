@@ -2,6 +2,7 @@ import React from 'react';
 import VolumeControls from '.';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import { LOW_VOLUME } from '../../utils/constants';
 
 describe('Components - Volume Controls - Render Test', () => {
   let volumeMuteMock;
@@ -22,6 +23,7 @@ describe('Components - Volume Controls - Render Test', () => {
         volumeMedium={volume1Mock}
         volumeHigh={volume2Mock}
         volumeLow={volume0Mock}
+        volume={LOW_VOLUME}
       />,
     );
     expect(container).toMatchSnapshot();

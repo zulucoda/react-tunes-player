@@ -9,7 +9,7 @@ exports[`Components - Volume Controls - Render Test should render player control
       class="sc-gsnTZi jMoirn volume-controls-list"
     >
       <li
-        class="sc-dkzDqf YgqTq volume-controls-list-x"
+        class="sc-dkzDqf sc-gKXOVf RRkiZ cMCDLz volume-controls-list-x"
       >
         <svg
           class="volume-x"
@@ -42,7 +42,7 @@ exports[`Components - Volume Controls - Render Test should render player control
         </svg>
       </li>
       <li
-        class="sc-dkzDqf YgqTq volume-controls-list-0"
+        class="sc-dkzDqf sc-jSMfEi RRkiZ jIdZZO volume-controls-list-0"
       >
         <svg
           class="volume"
@@ -63,7 +63,7 @@ exports[`Components - Volume Controls - Render Test should render player control
         </svg>
       </li>
       <li
-        class="sc-dkzDqf YgqTq volume-controls-list-1"
+        class="sc-dkzDqf sc-eCYdqJ RRkiZ dgKCTI volume-controls-list-1"
       >
         <svg
           class="volume-1"
@@ -87,7 +87,7 @@ exports[`Components - Volume Controls - Render Test should render player control
         </svg>
       </li>
       <li
-        class="sc-dkzDqf YgqTq volume-controls-list-2"
+        class="sc-dkzDqf sc-hKMtZM RRkiZ kTNKeB volume-controls-list-2"
       >
         <svg
           class="volume-2"

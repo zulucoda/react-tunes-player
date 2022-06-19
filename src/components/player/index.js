@@ -148,6 +148,7 @@ const Player = ({ tunes = [] }) => {
         volumeMedium={volumeMediumHandler}
         volumeHigh={volumeHighHandler}
         volumeLow={volumeLowHandler}
+        volume={volume}
       />
       <AudioWrapper>
         <Audio
