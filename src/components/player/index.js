@@ -7,7 +7,7 @@ import {
   MUTE_VOLUME,
   TunesPropTypes,
 } from '../../utils/constants';
-import { PlayerGrid } from '../../utils/theme';
+import { DARK_THEME_COLOR, LIGHT_COLOR } from '../../utils/theme';
 import { setNextTune, setPreviousTune } from '../../utils/util';
 import Album from '../album';
 import PlayerControls from '../player-controls';
@@ -15,6 +15,34 @@ import SeekControl from '../seek-control';
 import VolumeControls from '../volume-controls';
 import { Audio } from '../old-v5-player/audio';
 import { AudioWrapper } from '../../utils/styles';
+import styled from 'styled-components';
+import device from '../../utils/devices';
+
+export const PlayerGrid = styled.div`
+  background: ${DARK_THEME_COLOR};
+  display: grid;
+  color: ${LIGHT_COLOR};
+  grid-template-columns: 1fr 2fr 1fr;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 90px;
+  grid-gap: 0.5em;
+
+  // tablet
+  @media ${device.tablet} {
+    grid-gap: 0.5em;
+    grid-template-columns: 2fr 1fr 3fr;
+  }
+
+  // desktop
+  @media ${device.laptop} {
+    grid-gap: 2em;
+    grid-template-columns: 2fr 1fr 3fr 1fr;
+  }
+`;
 
 /**
  * Player v6

@@ -13,7 +13,7 @@ exports[`Components - Seek Controls - Render Test should render seek controls 1`
       0
     </span>
     <progress
-      class="sc-dkzDqf eRURgo seek-control-progress"
+      class="sc-dkzDqf gJyGrH seek-control-progress"
     />
     <span
       class="sc-gsnTZi ktPVQr seek-control-time-total"

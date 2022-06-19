@@ -35,13 +35,14 @@ const SeekControlProgress = styled.progress`
   /* Get rid of default border in Firefox. */
   border: none;
   background-size: auto;
+  background: #7b818a;
 
   ::-webkit-progress-value {
-    background: #eef2f7;
+    background: #ffffff;
   }
 
   ::-moz-progress-bar {
-    background: #eef2f7;
+    background: #ffffff;
   }
 
   @media ${device.tablet} {
