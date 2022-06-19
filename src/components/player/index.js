@@ -13,6 +13,8 @@ import Album from '../album';
 import PlayerControls from '../player-controls';
 import SeekControl from '../seek-control';
 import VolumeControls from '../volume-controls';
+import { Audio } from '../old-v5-player/audio';
+import { AudioWrapper } from '../../utils/styles';
 
 /**
  * Player v6
@@ -118,6 +120,21 @@ const Player = ({ tunes = [] }) => {
         volumeHigh={volumeHighHandler}
         volumeLow={volumeLowHandler}
       />
+      <AudioWrapper>
+        <Audio
+          currentTune={currentTune}
+          isPlaying={isPlaying}
+          volume={volume}
+          onEnded={onEnded}
+          setTuneDuration={setTuneDuration}
+          setSeekTimeTune={setSeekTimeTune}
+          seekTimeTune={seekTimeTune}
+          triggerCurrentTime={triggerCurrentTime}
+          setTriggerCurrentTime={setTriggerCurrentTime}
+          setIsLoading={setIsLoading}
+          setOnError={setOnError}
+        />
+      </AudioWrapper>
     </PlayerGrid>
   );
 };
