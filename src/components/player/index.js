@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { NoTunes } from '../old-v5-player/no-tunes';
-import { HIGH_VOLUME, TunesPropTypes } from '../../utils/constants';
+import {
+  HIGH_VOLUME,
+  LOW_VOLUME,
+  MEDIUM_VOLUME,
+  MUTE_VOLUME,
+  TunesPropTypes,
+} from '../../utils/constants';
 import { PlayerGrid } from '../../utils/theme';
 import { setNextTune, setPreviousTune } from '../../utils/util';
 import Album from '../album';
 import PlayerControls from '../player-controls';
 import SeekControl from '../seek-control';
+import VolumeControls from '../volume-controls';
 
 /**
  * Player v6
@@ -61,6 +68,22 @@ const Player = ({ tunes = [] }) => {
     setNextTune(tunes, currentTune, setCurrentTune);
   };
 
+  const volumeMuteHandler = () => {
+    setVolume(MUTE_VOLUME);
+  };
+
+  const volumeMediumHandler = () => {
+    setVolume(MEDIUM_VOLUME);
+  };
+
+  const volumeHighHandler = () => {
+    setVolume(HIGH_VOLUME);
+  };
+
+  const volumeLowHandler = () => {
+    setVolume(LOW_VOLUME);
+  };
+
   if (tunes.length === 0) {
     return (
       <PlayerGrid>
@@ -88,6 +111,12 @@ const Player = ({ tunes = [] }) => {
         setTriggerCurrentTime={setTriggerCurrentTime}
         drag={drag}
         setDrag={setDrag}
+      />
+      <VolumeControls
+        volumeMute={volumeMuteHandler}
+        volumeMedium={volumeMediumHandler}
+        volumeHigh={volumeHighHandler}
+        volumeLow={volumeLowHandler}
       />
     </PlayerGrid>
   );

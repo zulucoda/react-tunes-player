@@ -56,12 +56,10 @@ const Album = ({ title = '', cover = '' }) => {
     <AlbumGrid className="album">
       <AlbumCover className="album-cover">
         <AlbumImg className="album-img" src={cover} alt={title} />
-        <AlbumHeader className="album-header">
-          <AlbumHeaderFont className="album-header-font">
-            {title}
-          </AlbumHeaderFont>
-        </AlbumHeader>
       </AlbumCover>
+      <AlbumHeader className="album-header">
+        <AlbumHeaderFont className="album-header-font">{title}</AlbumHeaderFont>
+      </AlbumHeader>
     </AlbumGrid>
   );
 };
