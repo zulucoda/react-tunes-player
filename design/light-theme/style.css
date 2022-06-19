@@ -51,6 +51,10 @@ body {
     list-style: none;
 }
 
+.player-controls-list-skip-back:hover > svg {
+    fill: #7b818a;
+}
+
 .seek-control {
     display: grid;
     grid-template-columns: 1fr 1fr;
