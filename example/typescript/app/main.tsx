@@ -20,4 +20,4 @@ const data = [
 
 
 
-ReactDOM.render(<ReactTunesPlayer tunes={data} />, document.querySelector('.app'));
+ReactDOM.render(<ReactTunesPlayer tunes={data} oldPLayer={true} />, document.querySelector('.app'));
