@@ -14,4 +14,5 @@ export const TunesPropTypes = {
     }),
   ).isRequired,
   oldPlayer: bool,
+  darkMode: bool,
 };

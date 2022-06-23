@@ -7,7 +7,11 @@ import {
   MUTE_VOLUME,
   TunesPropTypes,
 } from '../../utils/constants';
-import { DARK_THEME_COLOR, LIGHT_COLOR } from '../../utils/theme';
+import {
+  DARK_THEME_COLOR,
+  LIGHT_COLOR,
+  LIGHT_THEME_COLOR,
+} from '../../utils/theme';
 import { setNextTune, setPreviousTune } from '../../utils/util';
 import Album from '../album';
 import PlayerControls from '../player-controls';
@@ -21,7 +25,8 @@ import { LoadingTune } from '../old-v5-player/loading-tune';
 import TuneError from '../old-v5-player/tune-error';
 
 export const PlayerGrid = styled.div`
-  background: ${DARK_THEME_COLOR};
+  background: ${(props) =>
+    props.darkMode ? `${DARK_THEME_COLOR}` : `${LIGHT_THEME_COLOR}`};
   display: grid;
   color: ${LIGHT_COLOR};
   grid-template-columns: 1fr 2fr 1fr;
@@ -49,10 +54,11 @@ export const PlayerGrid = styled.div`
 /**
  * Player v6
  * @param {Tunes} tunes
+ * @param {boolean} darkMode
  * @returns {JSX.Element}
  * @constructor
  */
-const Player = ({ tunes = [] }) => {
+const Player = ({ tunes = [], darkMode = true }) => {
   const [currentTune, setCurrentTune] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(HIGH_VOLUME);
@@ -118,7 +124,7 @@ const Player = ({ tunes = [] }) => {
 
   if (tunes.length === 0) {
     return (
-      <PlayerGrid>
+      <PlayerGrid darkMode={darkMode}>
         <NoTunes />
       </PlayerGrid>
     );
@@ -127,7 +133,7 @@ const Player = ({ tunes = [] }) => {
   // display loading state
   if (!currentTune) {
     return (
-      <PlayerGrid>
+      <PlayerGrid darkMode={darkMode}>
         <LoadingTune />
       </PlayerGrid>
     );
@@ -135,14 +141,14 @@ const Player = ({ tunes = [] }) => {
 
   if (onError) {
     return (
-      <PlayerGrid>
+      <PlayerGrid darkMode={darkMode}>
         <TuneError currentTune={currentTune} />
       </PlayerGrid>
     );
   }
 
   return (
-    <PlayerGrid>
+    <PlayerGrid darkMode={darkMode}>
       <Album title={currentTune.name} cover={currentTune.album} />
 
       {isLoading ? (

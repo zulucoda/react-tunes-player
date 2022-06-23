@@ -10,4 +10,8 @@ describe('Component - Player - Render Tests', () => {
       screen.getByText('Warning! No tunes loaded in player.'),
     ).toBeInTheDocument();
   });
+
+  test.todo('should render player with tunes');
+
+  test.todo('should render player in light mode');
 });

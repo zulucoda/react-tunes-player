@@ -8,12 +8,12 @@ import { Player as OldPlayer } from './components/old-v5-player/player';
 import PlayerV6 from './components/player';
 import { TunesPropTypes } from './utils/constants';
 
-const ReactTunesPlayer = ({ tunes, oldPlayer = false }) => {
+const ReactTunesPlayer = ({ tunes, oldPlayer = false, darkMode = true }) => {
   if (oldPlayer) {
     return <OldPlayer tunes={tunes} />;
   }
 
-  return <PlayerV6 tunes={tunes} />;
+  return <PlayerV6 tunes={tunes} darkMode={darkMode} />;
 };
 
 ReactTunesPlayer.propTypes = TunesPropTypes;
