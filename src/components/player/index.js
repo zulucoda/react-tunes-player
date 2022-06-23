@@ -124,7 +124,7 @@ const Player = ({ tunes = [], darkMode = true }) => {
 
   if (tunes.length === 0) {
     return (
-      <PlayerGrid darkMode={darkMode}>
+      <PlayerGrid darkMode={darkMode} className="player">
         <NoTunes />
       </PlayerGrid>
     );
@@ -133,7 +133,7 @@ const Player = ({ tunes = [], darkMode = true }) => {
   // display loading state
   if (!currentTune) {
     return (
-      <PlayerGrid darkMode={darkMode}>
+      <PlayerGrid darkMode={darkMode} className="player">
         <LoadingTune />
       </PlayerGrid>
     );
@@ -141,14 +141,14 @@ const Player = ({ tunes = [], darkMode = true }) => {
 
   if (onError) {
     return (
-      <PlayerGrid darkMode={darkMode}>
+      <PlayerGrid darkMode={darkMode} className="player">
         <TuneError currentTune={currentTune} />
       </PlayerGrid>
     );
   }
 
   return (
-    <PlayerGrid darkMode={darkMode}>
+    <PlayerGrid darkMode={darkMode} className="player">
       <Album title={currentTune.name} cover={currentTune.album} />
 
       {isLoading ? (
