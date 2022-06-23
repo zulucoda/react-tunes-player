@@ -4,7 +4,7 @@
  * Copyright zulucoda - mfbproject
  */
 import React from 'react';
-import { LoadingWrapper } from '../utils/styles';
+import { LoadingWrapper } from '../../utils/styles';
 
 export const LoadingTune = () => (
   <LoadingWrapper>

@@ -5,7 +5,7 @@
  */
 const findIndex = (tunes, currentTune) =>
   tunes && tunes.length
-    ? tunes.findIndex(t => t.name === currentTune.name)
+    ? tunes.findIndex((t) => t.name === currentTune.name)
     : -1;
 
 export const setPreviousTune = (tunes, currentTune, setCurrentTune) => {
@@ -19,3 +19,6 @@ export const setNextTune = (tunes, currentTune, setCurrentTune) => {
   const next = findIndex(tunes, currentTune) + 1;
   next >= tunes.length ? setCurrentTune(tunes[0]) : setCurrentTune(tunes[next]);
 };
+
+export const formatSeekTime = (timeToFormat) =>
+  timeToFormat > 0 ? (timeToFormat / 60).toFixed(2) : 0;

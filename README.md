@@ -6,7 +6,7 @@
 
 A simple responsive .ogg/.mp3 player.  
 
-[![react-tunes-player-example](https://raw.githubusercontent.com/zulucoda/react-tunes-player/master/react-tunes-player-example.gif)](https://react-tunes-player.mfbproject.co.za/)
+[![react-tunes-player-example](https://raw.githubusercontent.com/zulucoda/react-tunes-player/master/react-tunes-player-example.webm)](https://react-tunes-player.mfbproject.co.za/)
 
 ## Demo
 [Demo - https://react-tunes-player.mfbproject.co.za/](https://react-tunes-player.mfbproject.co.za/)
@@ -73,9 +73,11 @@ Example:
 
 ### Available Props
 
-| Prop | Type | Description |
-| :------| :-----------| :-----------|
-| tunes  | `Array<Tune>` | [Array of Tune Type](#tune-type) |
+| Prop      | Type          | Description                             |
+|:----------|:--------------|:----------------------------------------|
+| tunes     | `Array<Tune>` | [Array of Tune Type](#tune-type)        |
+| oldPlayer | `boolean`     | load old v5 player - default is `false` |
+| darkMode  | `boolean`     | light or dark them - default is `true`  |
 
 Example:
 ```
@@ -101,7 +103,39 @@ Example:
 
 *Greater than 1024 is the same laptop*
 
-
+## Available CSS Overrides
+| Class                                | Description                                                                | 
+|:-------------------------------------|:---------------------------------------------------------------------------|
+| `.album`                             | Override Album container                                                   |
+| `.album-cover`                       | Override Album Cover container                                             |
+| `.album-img`                         | Override Album Image                                                       |
+| `.album-header`                      | Override Album Header container                                            |
+| `.album-header-font`                 | Override Album Header Font                                                 |
+| `.player`                            | Override Player Container (Main Grid)                                      |
+| `.player-controls`                   | Override Player Controls Container                                         |
+| `.player-controls-list`              | Override Player Controls List Container                                    |
+| `.player-controls-list-skip-back`    | Override Player Controls List Skip Back Button Container                   |
+| `.skip-back`                         | Override Skip Back Button                                                  |
+| `.player-controls-list-play-circle`  | Override Player Controls List Play Button Container                        |
+| `.play-circle`                       | Override Play Button                                                       |
+| `.player-controls-list-pause-circle` | Override Player Controls List Pause Button Container                       |
+| `.pause-circle`                      | Override Pause Button                                                      |
+| `.player-controls-list-skip-forward` | Override Player Controls List Skip Forward Button Container                |
+| `.skip-forward`                      | Override Skip Forward Button                                               |
+| `.seek-control`                      | Override Seek Control Container                                            |
+| `.seek-control-time-progress`        | Override Seek Control Time Progress                                        |
+| `.seek-control-progress`             | Override Seek Control Progress                                             |
+| `.seek-control-time-total`           | Override Seek Control Time Total                                           |
+| `.volume-controls`                   | Override Volume Controls Container                                         |
+| `.volume-controls-list`              | Override Volume Controls List Container                                    |
+| `.volume-controls-list-x`            | Override Volume Controls List X Container (Mute Button Container)          |
+| `.volume-x`                          | Override Mute Button                                                       |
+| `.volume-controls-list-0`            | Override Volume Controls List 0 Container (Low Volume Button Container)    |
+| `.volume`                            | Override Low Volume Button                                                 |
+| `.volume-controls-list-1`            | Override Volume Controls List 1 Container (Medium Volume Button Container) |
+| `.volume-1`                          | Override Medium Volume Button                                              |
+| `.volume-controls-list-2`            | Override Volume Controls List 2 Container (High Volume Button Container)   |
+| `.volume-2`                          | Override High Volume Button Container                                      |
 
 ## Music Credits
 [Royalty Free Music from Bensound](http://www.bensound.com/)

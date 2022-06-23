@@ -3,5 +3,19 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-import { Player as ReactTunesPlayer } from './components/player';
+import React from 'react';
+import { Player as OldPlayer } from './components/old-v5-player/player';
+import PlayerV6 from './components/player';
+import { TunesPropTypes } from './utils/constants';
+
+const ReactTunesPlayer = ({ tunes, oldPlayer = false, darkMode = true }) => {
+  if (oldPlayer) {
+    return <OldPlayer tunes={tunes} />;
+  }
+
+  return <PlayerV6 tunes={tunes} darkMode={darkMode} />;
+};
+
+ReactTunesPlayer.propTypes = TunesPropTypes;
+
 export default ReactTunesPlayer;

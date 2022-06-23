@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - Seek Controls - Render Test should render seek controls 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ jzXAAq seek-control"
+    role="seek-control"
+  >
+    <span
+      class="sc-gsnTZi ktPVQr seek-control-time-progress"
+      role="seek-control-time-progress"
+    >
+      0
+    </span>
+    <progress
+      class="sc-dkzDqf bDNnao seek-control-progress"
+    />
+    <span
+      class="sc-gsnTZi ktPVQr seek-control-time-total"
+      role="seek-control-time-total"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;

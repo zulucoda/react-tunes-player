@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="player"> <!-- player -->
+
+      <div class="album"> <!-- album -->
+          <div class="album-cover"><img class="album-img" src="https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg" alt="The Lego Tune" /></div>
+          <div class="album-header"><h2 class="album-header-font">The Lego Tune</h2></div>
+      </div>
+
+      <div class="player-controls"> <!-- player controls -->
+          <ul class="player-controls-list">
+              <li class="player-controls-list-skip-back"><i icon-name="skip-back" class="skip-back"></i></li>
+              <li class="player-controls-list-play-circle"><i icon-name="play-circle" class="play-circle"  fill="#7b818a"></i></li>
+              <li class="player-controls-list-pause-circle"><i icon-name="pause-circle" class="pause-circle"></i></li>
+              <li class="player-controls-list-skip-forward"><i icon-name="skip-forward" class="skip-forward"></i></li>
+          </ul>
+      </div>
+
+      <div class="seek-control"> <!-- seek control -->
+          <span class="seek-control-time-progress">1:50</span>
+          <progress value="50" max="100" class="seek-control-progress"></progress>
+          <span class="seek-control-time-total">3:00</span>
+      </div>
+
+      <div class="volume-controls"> <!-- volume -->
+          <ul class="volume-controls-list">
+              <li class="volume-controls-list-x"><i icon-name="volume-x" class="volume-x" ></i></li>
+              <li class="volume-controls-list-0"><i icon-name="volume" class="volume"></i></li>
+              <li class="volume-controls-list-1"><i icon-name="volume-1" class="volume-1"></i></li>
+              <li class="volume-controls-list-2"><i icon-name="volume-2" class="volume-2"></i></li>
+          </ul>
+      </div>
+
+  </div>
+  <script>
+      lucide.createIcons();
+  </script>
+</body>
+</html>

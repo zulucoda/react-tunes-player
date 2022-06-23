@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components - Volume Controls - Render Test should render player controls 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ cKJGjv volume-controls"
+  >
+    <ul
+      class="sc-gsnTZi jMoirn volume-controls-list"
+    >
+      <li
+        class="sc-dkzDqf sc-gKXOVf RRkiZ cMCDLz volume-controls-list-x"
+      >
+        <svg
+          class="volume-x"
+          fill="none"
+          height="24"
+          role="volume-x"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+          />
+          <line
+            x1="22"
+            x2="16"
+            y1="9"
+            y2="15"
+          />
+          <line
+            x1="16"
+            x2="22"
+            y1="9"
+            y2="15"
+          />
+        </svg>
+      </li>
+      <li
+        class="sc-dkzDqf sc-jSMfEi RRkiZ jIdZZO volume-controls-list-0"
+      >
+        <svg
+          class="volume"
+          fill="none"
+          height="24"
+          role="volume"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+          />
+        </svg>
+      </li>
+      <li
+        class="sc-dkzDqf sc-eCYdqJ RRkiZ dgKCTI volume-controls-list-1"
+      >
+        <svg
+          class="volume-1"
+          fill="none"
+          height="24"
+          role="volume-1"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+          />
+          <path
+            d="M15.54 8.46a5 5 0 0 1 0 7.07"
+          />
+        </svg>
+      </li>
+      <li
+        class="sc-dkzDqf sc-hKMtZM RRkiZ kTNKeB volume-controls-list-2"
+      >
+        <svg
+          class="volume-2"
+          fill="none"
+          height="24"
+          role="volume-2"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+          />
+          <path
+            d="M15.54 8.46a5 5 0 0 1 0 7.07"
+          />
+          <path
+            d="M19.07 4.93a10 10 0 0 1 0 14.14"
+          />
+        </svg>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

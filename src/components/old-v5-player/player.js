@@ -10,7 +10,8 @@ import {
   LOW_VOLUME,
   MEDIUM_VOLUME,
   MUTE_VOLUME,
-} from '../utils/constants';
+  TunesPropTypes,
+} from '../../utils/constants';
 import {
   AudioWrapper,
   Controls,
@@ -31,9 +32,9 @@ import {
   TunesInner,
   TunesWrapper,
   Volume,
-} from '../utils/styles';
+} from '../../utils/styles';
 import { NoTunes } from './no-tunes';
-import { setNextTune, setPreviousTune } from '../utils/util';
+import { setNextTune, setPreviousTune } from '../../utils/util';
 import { Audio } from './audio';
 import { Progress } from './progress';
 import TuneError from './tune-error';
@@ -258,12 +259,4 @@ export const Player = ({ tunes = [] }) => {
   );
 };
 
-Player.propTypes = {
-  tunes: arrayOf(
-    exact({
-      tune: string.isRequired,
-      name: string.isRequired,
-      album: string.isRequired,
-    }),
-  ).isRequired,
-};
+Player.propTypes = TunesPropTypes;

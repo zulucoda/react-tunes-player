@@ -6,10 +6,10 @@
 
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import React from 'react';
-import ReactTunesPlayer from '../index';
-import 'jest-dom/extend-expect';
+import ReactTunesPlayer from '../../index';
+import '@testing-library/jest-dom/extend-expect';
 
-describe('React Tunes Player - Unit Test', () => {
+describe('React Tunes Player - Old Player Tests - Unit Test', () => {
   afterEach(cleanup);
 
   describe('when there are tunes', () => {
@@ -22,15 +22,13 @@ describe('React Tunes Player - Unit Test', () => {
     beforeEach(() => {
       tunes = [
         {
-          tune:
-            'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg',
+          tune: 'https://react-tunes-player.mfbproject.co.za/assets/audio/the_lego_tune.ogg',
           name: 'The lego tune',
           album:
             'https://react-tunes-player.mfbproject.co.za/assets/images/dune.jpg',
         },
         {
-          tune:
-            'https://react-tunes-player.mfbproject.co.za/assets/audio/bensound-funkysuspense.mp3',
+          tune: 'https://react-tunes-player.mfbproject.co.za/assets/audio/bensound-funkysuspense.mp3',
           name: 'Funky Suspense',
           album:
             'https://react-tunes-player.mfbproject.co.za/assets/images/funkysuspense.jpg',
@@ -43,7 +41,7 @@ describe('React Tunes Player - Unit Test', () => {
 
     test('renders player with 1st tune loaded', () => {
       const { container, getByTestId } = render(
-        <ReactTunesPlayer tunes={tunes} />,
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
       );
       loadData(getByTestId('current-tune-audio'));
 
@@ -51,7 +49,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('render next tune onNextTune click', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       fireEvent.click(getByTestId('next-tune'));
@@ -63,7 +63,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('render previous tune onPrevTune click', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       fireEvent.click(getByTestId('previous-tune'));
@@ -75,7 +77,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('render previous tune onPrevTune click 2x', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       expect(getByTestId('current-tune-name')).toContainHTML('The lego tune');
@@ -101,7 +105,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('render previous tune onNextTune click 2x', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       expect(getByTestId('current-tune-name')).toContainHTML('The lego tune');
@@ -127,7 +133,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('renders play button button with red colour on onPlay click', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       fireEvent.click(getByTestId('play-tune'));
@@ -136,7 +144,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('renders pause button button with red colour on onPause click', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       fireEvent.click(getByTestId('pause-tune'));
@@ -145,7 +155,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('renders HighVolume with red colour on HighVolume button click', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       fireEvent.click(getByTestId('high-volume'));
@@ -153,7 +165,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('renders MediumVolume with red colour on MediumVolume button click', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       fireEvent.click(getByTestId('medium-volume'));
@@ -161,7 +175,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('renders LowVolume with red colour on LowVolume button click', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       fireEvent.click(getByTestId('low-volume'));
@@ -169,7 +185,9 @@ describe('React Tunes Player - Unit Test', () => {
     });
 
     test('renders MuteVolume with red colour on MuteVolume button click', () => {
-      const { getByTestId } = render(<ReactTunesPlayer tunes={tunes} />);
+      const { getByTestId } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={tunes} />,
+      );
       loadData(getByTestId('current-tune-audio'));
 
       fireEvent.click(getByTestId('mute-volume'));
@@ -179,7 +197,9 @@ describe('React Tunes Player - Unit Test', () => {
 
   describe('when there are NO tunes', () => {
     test('render Warning! No tunes loaded in player.', () => {
-      const { container } = render(<ReactTunesPlayer tunes={[]} />);
+      const { container } = render(
+        <ReactTunesPlayer oldPlayer={true} tunes={[]} />,
+      );
 
       expect(container.firstChild).toMatchSnapshot();
     });

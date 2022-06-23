@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.player {
+    background: #353739;
+    display: grid;
+    color: #eef2f7;
+    grid-template-columns: 1fr 2fr 1fr;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 90px;
+    grid-gap: 0.5em;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.album-cover {
+    display: none;
+}
+
+.album-header {
+    width: 100%;
+    align-self: center;
+}
+
+.album-header-font {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.player-controls-list {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.player-controls-list-skip-back, .player-controls-list-play-circle, .player-controls-list-pause-circle, .player-controls-list-skip-forward {
+    list-style: none;
+}
+
+.player-controls-list-skip-back:hover > svg {
+    fill: #7b818a;
+}
+
+.seek-control {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.seek-control-progress {
+    display: none;
+}
+
+.seek-control-time-progress, .seek-control-time-total {
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.seek-control-progress {
+    width: calc(100% - 1em);
+    height: 0.5em;
+
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Get rid of default border in Firefox. */
+    border: none;
+    background-size: auto;
+    background: #7b818a;
+}
+
+.seek-control-progress::-webkit-progress-value {
+    background: #ffffff;
+}
+
+.seek-control-progress::-moz-progress-bar {
+    background: #ffffff;
+}
+
+.volume-controls {
+    display: none;
+}
+
+.volume-controls-list-x, .volume-controls-list-0, .volume-controls-list-1, .volume-controls-list-2 {
+    list-style: none;
+}
+
+@media screen and (min-width: 375px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .player {
+        grid-gap: 0.5em;
+        grid-template-columns: 2fr 1fr 3fr;
+    }
+
+    .seek-control {
+        grid-template-columns: 2em auto 2em;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .seek-control-progress {
+        display: inline;
+    }
+
+    .album {
+        display: grid;
+        grid-template-columns: 114px 2fr;
+        height: calc(100% - 1em);
+    }
+
+    .album-cover {
+        display: block;
+        margin: 0.5em;
+        border: 1px solid #eef2f7;
+        width: 100px;
+        height: calc(90px - 1em);
+    }
+
+    .album-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .album-header-font {
+        font-size: 16px;
+    }
+
+    .volume-controls-list {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .player {
+        grid-gap: 2em;
+        grid-template-columns: 2fr 1fr 3fr 1fr;
+    }
+
+    .volume-controls {
+        display: inline;
+    }
+}
