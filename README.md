@@ -6,7 +6,7 @@
 
 A simple responsive .ogg/.mp3 player.  
 
-[![react-tunes-player-example](https://raw.githubusercontent.com/zulucoda/react-tunes-player/master/react-tunes-player-example.webm)](https://react-tunes-player.mfbproject.co.za/)
+[![react-tunes-player-example](https://raw.githubusercontent.com/zulucoda/react-tunes-player/master/react-tunes-player-example.gif)](https://react-tunes-player.mfbproject.co.za/)
 
 ## Demo
 [Demo - https://react-tunes-player.mfbproject.co.za/](https://react-tunes-player.mfbproject.co.za/)
