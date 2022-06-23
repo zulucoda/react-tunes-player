@@ -6,18 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ## vnext
-- customize css properties:
-  1. add width
-  2. update height
-- update buttons to use [lucid-icons](https://github.com/lucide-icons/lucide)
+- update volume to use slider
+
+## [6.0.0] - 2022-06-23
+### Changed
+- adding `oldPlayer` toggle to toggle between old player and new v6 player - [@zulucoda](https://github.com/zulucoda).
+- layout - update to use grid - v6 player - [@zulucoda](https://github.com/zulucoda).
+- themes - [@zulucoda](https://github.com/zulucoda).
+  1. dark theme
+  2. light theme
+- update buttons to use [lucid-icons](https://github.com/lucide-icons/lucide) - [@zulucoda](https://github.com/zulucoda). 
   1. play button
   2. previous button
   3. next button
-- update volume to use slider
-- themes
-  1. dark theme
-  2. light theme
-- layout - update to use grid
+- adding css class name for styling overrides - [@zulucoda](https://github.com/zulucoda).
 
 ## [5.0.0] - 2020-07-25
 ### Changed
