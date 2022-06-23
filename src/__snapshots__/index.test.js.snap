@@ -3,7 +3,7 @@
 exports[`React Tunes Player - Render Tests should render new player by default 1`] = `
 <div>
   <div
-    class="sc-jdAMXn eBAAmP"
+    class="sc-jdAMXn eBAAmP player"
   >
     <div
       class="sc-bjUoiL gvnUrq"
